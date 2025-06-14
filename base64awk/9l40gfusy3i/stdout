@@ -1,0 +1,7 @@
+HTTP/1.1 200 OK
+Cache-control: max-age=1800
+Usn: uuid:3ef89534-fb8e-c38f-0000-00007940d6d3
+Location: http://192.168.0.100:57916/dev/3ef89534-fb8e-c38f-0000-00007940d6d3/desc.xml
+Server: Linux/2.6.29 UPnP/1.0 BubbleUPnP/1.6.11.1
+Ext: 
+St: uuid:3ef89534-fb8e-c38f-0000-00007940d6d3

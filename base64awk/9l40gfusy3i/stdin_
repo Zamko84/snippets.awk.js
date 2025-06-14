@@ -1,0 +1,336 @@
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=1800
+DATE: Tue, 16 Aug 2016 11:59:36 GMT
+Accept-Ranges: bytes
+EXT:
+LOCATION: http://192.168.0.1:49153/description.xml
+SERVER: Linux/2.6.31--LSDK-9.2.0_U5.508, UPnP/1.0, Portable SDK for UPnP devices/1.6.6
+X-User-Agent: redsonic
+ST: upnp:rootdevice
+USN: uuid:898f9738-d930-4db4-a3cf-14cc206a0404::upnp:rootdevice
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=100
+DATE: Tue, 16 Aug 2016 11:59:36 GMT
+EXT:
+LOCATION: http://192.168.0.1:1900/igd.xml
+SERVER: ipos/7.0 UPnP/1.0 TL-WR842ND/2.0
+ST: upnp:rootdevice
+USN: uuid:060b7353-fca6-4070-85f4-1fbfb9add62c::upnp:rootdevice
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=1800
+DATE: Tue, 16 Aug 2016 11:59:36 GMT
+Accept-Ranges: bytes
+EXT:
+LOCATION: http://192.168.0.1:49153/description.xml
+SERVER: Linux/2.6.31--LSDK-9.2.0_U5.508, UPnP/1.0, Portable SDK for UPnP devices/1.6.6
+X-User-Agent: redsonic
+ST: uuid:898f9738-d930-4db4-a3cf-14cc206a0404
+USN: uuid:898f9738-d930-4db4-a3cf-14cc206a0404
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=100
+DATE: Tue, 16 Aug 2016 11:59:36 GMT
+EXT:
+LOCATION: http://192.168.0.1:1900/igd.xml
+SERVER: ipos/7.0 UPnP/1.0 TL-WR842ND/2.0
+ST: uuid:060b7353-fca6-4070-85f4-1fbfb9add62c
+USN: uuid:060b7353-fca6-4070-85f4-1fbfb9add62c
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=1800
+DATE: Tue, 16 Aug 2016 11:59:36 GMT
+Accept-Ranges: bytes
+EXT:
+LOCATION: http://192.168.0.1:49153/description.xml
+SERVER: Linux/2.6.31--LSDK-9.2.0_U5.508, UPnP/1.0, Portable SDK for UPnP devices/1.6.6
+X-User-Agent: redsonic
+ST: urn:schemas-upnp-org:device:MediaServer:1
+USN: uuid:898f9738-d930-4db4-a3cf-14cc206a0404::urn:schemas-upnp-org:device:MediaServer:1
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=100
+DATE: Tue, 16 Aug 2016 11:59:36 GMT
+EXT:
+LOCATION: http://192.168.0.1:1900/igd.xml
+SERVER: ipos/7.0 UPnP/1.0 TL-WR842ND/2.0
+ST: urn:schemas-upnp-org:device:InternetGatewayDevice:1
+USN: uuid:060b7353-fca6-4070-85f4-1fbfb9add62c::urn:schemas-upnp-org:device:InternetGatewayDevice:1
+
+
+HTTP/1.1 200 OK
+Cache-control: max-age=1800
+Usn: uuid:3ef89534-fb8e-c38f-0000-00007940d6d3::upnp:rootdevice
+Location: http://192.168.0.100:57916/dev/3ef89534-fb8e-c38f-0000-00007940d6d3/desc.xml
+Server: Linux/2.6.29 UPnP/1.0 BubbleUPnP/1.6.11.1
+Ext: 
+St: upnp:rootdevice
+
+
+HTTP/1.1 200 OK
+Cache-control: max-age=1800
+Usn: uuid:3ef89534-fb8e-c38f-0000-00007940d6d3
+Location: http://192.168.0.100:57916/dev/3ef89534-fb8e-c38f-0000-00007940d6d3/desc.xml
+Server: Linux/2.6.29 UPnP/1.0 BubbleUPnP/1.6.11.1
+Ext: 
+St: uuid:3ef89534-fb8e-c38f-0000-00007940d6d3
+
+
+HTTP/1.1 200 OK
+Cache-control: max-age=1800
+Usn: uuid:3ef89534-fb8e-c38f-0000-00007940d6d3::urn:schemas-upnp-org:device:MediaRenderer:1
+Location: http://192.168.0.100:57916/dev/3ef89534-fb8e-c38f-0000-00007940d6d3/desc.xml
+Server: Linux/2.6.29 UPnP/1.0 BubbleUPnP/1.6.11.1
+Ext: 
+St: urn:schemas-upnp-org:device:MediaRenderer:1
+
+
+HTTP/1.1 200 OK
+Cache-control: max-age=1800
+Usn: uuid:3ef89534-fb8e-c38f-0000-00007940d6d3::urn:schemas-upnp-org:service:ConnectionManager:1
+Location: http://192.168.0.100:57916/dev/3ef89534-fb8e-c38f-0000-00007940d6d3/desc.xml
+Server: Linux/2.6.29 UPnP/1.0 BubbleUPnP/1.6.11.1
+Ext: 
+St: urn:schemas-upnp-org:service:ConnectionManager:1
+
+
+HTTP/1.1 200 OK
+Cache-control: max-age=1800
+Usn: uuid:3ef89534-fb8e-c38f-0000-00007940d6d3::urn:schemas-upnp-org:service:RenderingControl:1
+Location: http://192.168.0.100:57916/dev/3ef89534-fb8e-c38f-0000-00007940d6d3/desc.xml
+Server: Linux/2.6.29 UPnP/1.0 BubbleUPnP/1.6.11.1
+Ext: 
+St: urn:schemas-upnp-org:service:RenderingControl:1
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=1800
+DATE: Tue, 16 Aug 2016 11:59:37 GMT
+Accept-Ranges: bytes
+EXT:
+LOCATION: http://192.168.0.1:49153/description.xml
+SERVER: Linux/2.6.31--LSDK-9.2.0_U5.508, UPnP/1.0, Portable SDK for UPnP devices/1.6.6
+X-User-Agent: redsonic
+ST: urn:schemas-upnp-org:service:ConnectionManager:1
+USN: uuid:898f9738-d930-4db4-a3cf-14cc206a0404::urn:schemas-upnp-org:service:ConnectionManager:1
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=100
+DATE: Tue, 16 Aug 2016 11:59:37 GMT
+EXT:
+LOCATION: http://192.168.0.1:1900/igd.xml
+SERVER: ipos/7.0 UPnP/1.0 TL-WR842ND/2.0
+ST: urn:schemas-upnp-org:service:Layer3Forwarding:1
+USN: uuid:060b7353-fca6-4070-85f4-1fbfb9add62c::urn:schemas-upnp-org:service:Layer3Forwarding:1
+
+
+HTTP/1.1 200 OK
+Cache-control: max-age=1800
+Usn: uuid:3ef89534-fb8e-c38f-0000-00007940d6d3::urn:schemas-upnp-org:service:AVTransport:1
+Location: http://192.168.0.100:57916/dev/3ef89534-fb8e-c38f-0000-00007940d6d3/desc.xml
+Server: Linux/2.6.29 UPnP/1.0 BubbleUPnP/1.6.11.1
+Ext: 
+St: urn:schemas-upnp-org:service:AVTransport:1
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=1800
+DATE: Tue, 16 Aug 2016 11:59:37 GMT
+Accept-Ranges: bytes
+EXT:
+LOCATION: http://192.168.0.1:49153/description.xml
+SERVER: Linux/2.6.31--LSDK-9.2.0_U5.508, UPnP/1.0, Portable SDK for UPnP devices/1.6.6
+X-User-Agent: redsonic
+ST: urn:schemas-upnp-org:service:ContentDirectory:1
+USN: uuid:898f9738-d930-4db4-a3cf-14cc206a0404::urn:schemas-upnp-org:service:ContentDirectory:1
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=100
+DATE: Tue, 16 Aug 2016 11:59:37 GMT
+EXT:
+LOCATION: http://192.168.0.1:1900/igd.xml
+SERVER: ipos/7.0 UPnP/1.0 TL-WR842ND/2.0
+ST: uuid:254e9977-8964-49f3-b8d5-51acb7bd40fc
+USN: uuid:254e9977-8964-49f3-b8d5-51acb7bd40fc
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=1800
+DATE: Tue, 16 Aug 2016 11:59:37 GMT
+Accept-Ranges: bytes
+EXT:
+LOCATION: http://192.168.0.1:49153/description.xml
+SERVER: Linux/2.6.31--LSDK-9.2.0_U5.508, UPnP/1.0, Portable SDK for UPnP devices/1.6.6
+X-User-Agent: redsonic
+ST: urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1
+USN: uuid:898f9738-d930-4db4-a3cf-14cc206a0404::urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=100
+DATE: Tue, 16 Aug 2016 11:59:37 GMT
+EXT:
+LOCATION: http://192.168.0.1:1900/igd.xml
+SERVER: ipos/7.0 UPnP/1.0 TL-WR842ND/2.0
+ST: urn:schemas-upnp-org:device:WANDevice:1
+USN: uuid:254e9977-8964-49f3-b8d5-51acb7bd40fc::urn:schemas-upnp-org:device:WANDevice:1
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=100
+DATE: Tue, 16 Aug 2016 11:59:37 GMT
+EXT:
+LOCATION: http://192.168.0.1:1900/igd.xml
+SERVER: ipos/7.0 UPnP/1.0 TL-WR842ND/2.0
+ST: urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1
+USN: uuid:254e9977-8964-49f3-b8d5-51acb7bd40fc::urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=100
+DATE: Tue, 16 Aug 2016 11:59:37 GMT
+EXT:
+LOCATION: http://192.168.0.1:1900/igd.xml
+SERVER: ipos/7.0 UPnP/1.0 TL-WR842ND/2.0
+ST: uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37
+USN: uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=100
+DATE: Tue, 16 Aug 2016 11:59:37 GMT
+EXT:
+LOCATION: http://192.168.0.1:1900/igd.xml
+SERVER: ipos/7.0 UPnP/1.0 TL-WR842ND/2.0
+ST: urn:schemas-upnp-org:device:WANConnectionDevice:1
+USN: uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37::urn:schemas-upnp-org:device:WANConnectionDevice:1
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=100
+DATE: Tue, 16 Aug 2016 11:59:37 GMT
+EXT:
+LOCATION: http://192.168.0.1:1900/igd.xml
+SERVER: ipos/7.0 UPnP/1.0 TL-WR842ND/2.0
+ST: urn:schemas-upnp-org:service:WANIPConnection:1
+USN: uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37::urn:schemas-upnp-org:service:WANIPConnection:1
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=1801
+DATE: Tue, 16 Aug 2016 11:59:37 GMT
+EXT:
+LOCATION: http://192.168.0.1:49152/wps_device.xml
+SERVER: Unspecified, UPnP/1.0, Unspecified
+ST: upnp:rootdevice
+USN: uuid:00000000-0000-1000-0000-14cc206a0404::upnp:rootdevice
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=1801
+DATE: Tue, 16 Aug 2016 11:59:37 GMT
+EXT:
+LOCATION: http://192.168.0.1:49152/wps_device.xml
+SERVER: Unspecified, UPnP/1.0, Unspecified
+ST: upnp:rootdevice
+USN: uuid:00000000-0000-1000-0000-14cc206a0404::upnp:rootdevice
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=1801
+DATE: Tue, 16 Aug 2016 11:59:37 GMT
+EXT:
+LOCATION: http://192.168.0.1:49152/wps_device.xml
+SERVER: Unspecified, UPnP/1.0, Unspecified
+ST: uuid:00000000-0000-1000-0000-14cc206a0404
+USN: uuid:00000000-0000-1000-0000-14cc206a0404
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=1801
+DATE: Tue, 16 Aug 2016 11:59:38 GMT
+EXT:
+LOCATION: http://192.168.0.1:49152/wps_device.xml
+SERVER: Unspecified, UPnP/1.0, Unspecified
+ST: uuid:00000000-0000-1000-0000-14cc206a0404
+USN: uuid:00000000-0000-1000-0000-14cc206a0404
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=1801
+DATE: Tue, 16 Aug 2016 11:59:38 GMT
+EXT:
+LOCATION: http://192.168.0.1:49152/wps_device.xml
+SERVER: Unspecified, UPnP/1.0, Unspecified
+ST: urn:schemas-wifialliance-org:device:WFADevice:1
+USN: uuid:00000000-0000-1000-0000-14cc206a0404::urn:schemas-wifialliance-org:device:WFADevice:1
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=1801
+DATE: Tue, 16 Aug 2016 11:59:38 GMT
+EXT:
+LOCATION: http://192.168.0.1:49152/wps_device.xml
+SERVER: Unspecified, UPnP/1.0, Unspecified
+ST: urn:schemas-wifialliance-org:device:WFADevice:1
+USN: uuid:00000000-0000-1000-0000-14cc206a0404::urn:schemas-wifialliance-org:device:WFADevice:1
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=1801
+DATE: Tue, 16 Aug 2016 11:59:38 GMT
+EXT:
+LOCATION: http://192.168.0.1:49152/wps_device.xml
+SERVER: Unspecified, UPnP/1.0, Unspecified
+ST: urn:schemas-wifialliance-org:service:WFAWLANConfig:1
+USN: uuid:00000000-0000-1000-0000-14cc206a0404::urn:schemas-wifialliance-org:service:WFAWLANConfig:1
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=1801
+DATE: Tue, 16 Aug 2016 11:59:38 GMT
+EXT:
+LOCATION: http://192.168.0.1:49152/wps_device.xml
+SERVER: Unspecified, UPnP/1.0, Unspecified
+ST: urn:schemas-wifialliance-org:service:WFAWLANConfig:1
+USN: uuid:00000000-0000-1000-0000-14cc206a0404::urn:schemas-wifialliance-org:service:WFAWLANConfig:1
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=100
+DATE: Tue, 16 Aug 2016 11:59:38 GMT
+EXT:
+LOCATION: http://192.168.0.1:1900/igd.xml
+SERVER: ipos/7.0 UPnP/1.0 TL-WR842ND/2.0
+ST: uuid:565aa949-67c1-4c0e-aa8f-f349e6f59311
+USN: uuid:565aa949-67c1-4c0e-aa8f-f349e6f59311
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=100
+DATE: Tue, 16 Aug 2016 11:59:38 GMT
+EXT:
+LOCATION: http://192.168.0.1:1900/igd.xml
+SERVER: ipos/7.0 UPnP/1.0 TL-WR842ND/2.0
+ST: urn:schemas-wifialliance-org:device:WFADevice:1
+USN: uuid:565aa949-67c1-4c0e-aa8f-f349e6f59311::urn:schemas-wifialliance-org:device:WFADevice:1
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=100
+DATE: Tue, 16 Aug 2016 11:59:38 GMT
+EXT:
+LOCATION: http://192.168.0.1:1900/igd.xml
+SERVER: ipos/7.0 UPnP/1.0 TL-WR842ND/2.0
+ST: urn:schemas-wifialliance-org:service:WFAWLANConfig:1
+USN: uuid:565aa949-67c1-4c0e-aa8f-f349e6f59311::urn:schemas-wifialliance-org:service:WFAWLANConfig:1
+
+
