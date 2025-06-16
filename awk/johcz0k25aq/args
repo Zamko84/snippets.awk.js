@@ -1,0 +1,1 @@
+-F "[, ]+" '/George|^John/{print $NF ":", $2, $(NF-1)}'
