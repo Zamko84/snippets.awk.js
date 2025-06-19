@@ -1,0 +1,17 @@
+mawk: cannot open 
+BEGIN {
+    FS=" *\\| *"; max_duration = -1
+}
+!/^#/ && NF >= 8 {
+    if ($3 == "Mars" && $4 == "Completed") {
+        duration = $6 + 0
+        if (duration > max_duration) {
+            max_duration = duration
+            security_code = $8
+        }
+    }
+}
+END {
+    print security_code
+}
+ (No such file or directory)
