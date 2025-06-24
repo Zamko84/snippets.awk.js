@@ -1,0 +1,336 @@
+locals {
+  project_cert_mappings = {
+    tt-pr-appservers-eng = {
+      wildcard-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-techtarget-com"]
+        regions     = ["us-east4", "global"]
+      }
+      wildcard-eng-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-eng-techtarget-com"]
+      }
+      wildcard-bitpipe-fr = {
+        certificate = acme_certificate.certificate["wildcard-bitpipe-fr"]
+      }
+      wildcard-bitpipe-com-br = {
+        certificate = acme_certificate.certificate["wildcard-bitpipe-com-br"]
+      }
+      wildcard-bitpipe-com = {
+        certificate = acme_certificate.certificate["wildcard-bitpipe-com"]
+      }
+      wildcard-techtarget-com-cn = {
+        certificate = acme_certificate.certificate["wildcard-techtarget-com-cn"]
+      }
+      wildcard-computerweekly-com = {
+        certificate = acme_certificate.certificate["wildcard-computerweekly-com"]
+      }
+      wildcard-lemagit-fr = {
+        certificate = acme_certificate.certificate["wildcard-lemagit-fr"]
+      }
+      wildcard-datasciencecentral-com = {
+        certificate = acme_certificate.certificate["wildcard-datasciencecentral-com"]
+      }
+      wildcard-theserverside-com = {
+        certificate = acme_certificate.certificate["wildcard-theserverside-com"]
+      }
+    }
+    tt-pr-appservers-qa = {
+      wildcard-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-techtarget-com"]
+        regions     = ["us-east4", "global"]
+      }
+      wildcard-qa-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-qa-techtarget-com"]
+      }
+      wildcard-bitpipe-fr = {
+        certificate = acme_certificate.certificate["wildcard-bitpipe-fr"]
+      }
+      wildcard-bitpipe-com-br = {
+        certificate = acme_certificate.certificate["wildcard-bitpipe-com-br"]
+      }
+      wildcard-bitpipe-com = {
+        certificate = acme_certificate.certificate["wildcard-bitpipe-com"]
+      }
+      wildcard-techtarget-com-cn = {
+        certificate = acme_certificate.certificate["wildcard-techtarget-com-cn"]
+      }
+      wildcard-computerweekly-com = {
+        certificate = acme_certificate.certificate["wildcard-computerweekly-com"]
+      }
+      wildcard-lemagit-fr = {
+        certificate = acme_certificate.certificate["wildcard-lemagit-fr"]
+      }
+      wildcard-datasciencecentral-com = {
+        certificate = acme_certificate.certificate["wildcard-datasciencecentral-com"]
+      }
+      wildcard-theserverside-com = {
+        certificate = acme_certificate.certificate["wildcard-theserverside-com"]
+      }
+    }
+    tt-pr-appservers-prod = {
+      wildcard-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-techtarget-com"]
+        regions     = ["us-east4", "global"]
+      }
+      wildcard-bitpipe-fr = {
+        certificate = acme_certificate.certificate["wildcard-bitpipe-fr"]
+      }
+      wildcard-bitpipe-com-br = {
+        certificate = acme_certificate.certificate["wildcard-bitpipe-com-br"]
+      }
+      wildcard-bitpipe-com = {
+        certificate = acme_certificate.certificate["wildcard-bitpipe-com"]
+      }
+      wildcard-techtarget-com-cn = {
+        certificate = acme_certificate.certificate["wildcard-techtarget-com-cn"]
+      }
+    }
+    # KUBE Projects
+    tt-pr-kube-eng = {
+      wildcard-eng-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-eng-techtarget-com"]
+      }
+      wildcard-iad-eng-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-iad-eng-techtarget-com"]
+      }
+    }
+    tt-pr-kube-qa = {
+      wildcard-qa-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-qa-techtarget-com"]
+      }
+      wildcard-iad-qa-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-iad-qa-techtarget-com"]
+      }
+    }
+    tt-pr-kube-prod = {
+      wildcard-iad-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-iad-techtarget-com"]
+      }
+      wildcard-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-techtarget-com"]
+      }
+    }
+    tt-pr-media = {
+      wildcard-bitpipe-com = {
+        certificate = acme_certificate.certificate["wildcard-bitpipe-com"]
+      }
+      wildcard-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-techtarget-com"]
+        regions     = ["us-east4", "global"]
+      }
+      wildcard-eng-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-eng-techtarget-com"]
+      }
+      wildcard-qa-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-qa-techtarget-com"]
+      }
+    }
+
+    # IT Operations Project
+    tt-pr-itops = {
+      wildcard-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-techtarget-com"]
+      }
+    }
+
+    # Data Services Projects
+    tt-pr-dataservices-eng = {
+      wildcard-eng-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-eng-techtarget-com"]
+      }
+      wildcard-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-techtarget-com"]
+      }
+    }
+    tt-pr-dataservices-prod = {
+      wildcard-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-techtarget-com"]
+      }
+    }
+
+    # CICD Projects
+    tt-pr-cicd-eng = {
+      wildcard-eng-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-eng-techtarget-com"]
+      }
+      wildcard-eng-gcp-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-eng-gcp-techtarget-com"]
+      }
+      wildcard-argo-events-eng-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-argo-events-eng-techtarget-com"]
+      }
+    }
+    tt-pr-cicd-qa = {
+      wildcard-qa-gcp-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-qa-gcp-techtarget-com"]
+      }
+      wildcard-argo-events-qa-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-argo-events-qa-techtarget-com"]
+      }
+    }
+    tt-pr-cicd-prod = {
+      wildcard-prod-gcp-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-prod-gcp-techtarget-com"]
+      }
+      wildcard-argo-events-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-argo-events-techtarget-com"]
+      }
+    }
+
+    # Rundeck services
+    tt-pr-pd-services-eng = {
+      wildcard-eng-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-eng-techtarget-com"]
+      }
+      wildcard-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-techtarget-com"]
+      }
+    }
+    tt-pr-pd-services-qa = {
+      wildcard-qa-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-qa-techtarget-com"]
+      }
+      wildcard-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-techtarget-com"]
+      }
+    }
+    tt-pr-pd-services-prod = {
+      wildcard-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-techtarget-com"]
+      }
+    }
+    tt-pr-pd-services-hub = {
+      wildcard-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-techtarget-com"]
+      }
+    }
+
+    # Web infra projects
+    tt-pr-web-eng = {
+      wildcard-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-techtarget-com"]
+        regions     = ["us-east4", "global"]
+      }
+      wildcard-eng-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-eng-techtarget-com"]
+        regions     = ["us-east4", "global"]
+      }
+    }
+    tt-pr-web-qa = {
+      wildcard-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-techtarget-com"]
+        regions     = ["us-east4", "global"]
+      }
+      wildcard-qa-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-qa-techtarget-com"]
+        regions     = ["us-east4", "global"]
+      }
+    }
+    tt-pr-web-prod = {
+      wildcard-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-techtarget-com"]
+        regions     = ["us-east4", "global"]
+      }
+      wildcard-lemagit-fr = {
+        certificate = acme_certificate.certificate["wildcard-lemagit-fr"]
+        regions     = ["us-east4", "global"]
+      }
+      wildcard-computerweekly-com = {
+        certificate = acme_certificate.certificate["wildcard-computerweekly-com"]
+        regions     = ["us-east4", "global"]
+      }
+      wildcard-bitpipe-com = {
+        certificate = acme_certificate.certificate["wildcard-bitpipe-com"]
+        regions     = ["us-east4", "global"]
+      }
+      wildcard-informatechtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-informatechtarget-com"]
+        regions     = ["us-east4", "global"]
+      }
+      wildcard-informatechtarget-fr = {
+        certificate = acme_certificate.certificate["wildcard-informatechtarget-fr"]
+        regions     = ["us-east4", "global"]
+      }
+      wildcard-informatechtarget-de = {
+        certificate = acme_certificate.certificate["wildcard-informatechtarget-de"]
+        regions     = ["us-east4", "global"]
+      }
+      wildcard-searchapparchitecture-com = {
+        certificate = acme_certificate.certificate["wildcard-searchapparchitecture-com"]
+        regions     = ["us-east4", "global"]
+      }
+      wildcard-searchcustomerexperience-com = {
+        certificate = acme_certificate.certificate["wildcard-searchcustomerexperience-com"]
+        regions     = ["us-east4", "global"]
+      }
+      wildcard-searchaws-com = {
+        certificate = acme_certificate.certificate["wildcard-searchaws-com"]
+        regions     = ["us-east4", "global"]
+      }
+      wildcard-searchenterpriseai-com = {
+        certificate = acme_certificate.certificate["wildcard-searchenterpriseai-com"]
+      }
+      wildcard-searcherp-com = {
+        certificate = acme_certificate.certificate["wildcard-searcherp-com"]
+        regions     = ["us-east4", "global"]
+      }
+      wildcard-searchhrsoftware-com = {
+        certificate = acme_certificate.certificate["wildcard-searchhrsoftware-com"]
+        regions     = ["us-east4", "global"]
+      }
+      wildcard-searchitoperations-com = {
+        certificate = acme_certificate.certificate["wildcard-searchitoperations-com"]
+        regions     = ["us-east4", "global"]
+      }
+    }
+    tt-pr-dataanalytics-eng = {
+      wildcard-eng-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-eng-techtarget-com"]
+      }
+    }
+
+    tt-pr-dataanalytics-qa = {
+      wildcard-qa-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-qa-techtarget-com"]
+      }
+    }
+
+    tt-pr-dataanalytics-prod = {
+      wildcard-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-techtarget-com"]
+      }
+    }
+    tt-pr-intentapp-event-eng = {
+      wildcard-eng-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-eng-techtarget-com"]
+        regions     = ["us-east4", "global"]
+      }
+    }
+    tt-pr-intentapp-event-qa = {
+      wildcard-qa-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-qa-techtarget-com"]
+        regions     = ["us-east4", "global"]
+      }
+    }
+    tt-pr-intentapp-event-prod = {
+      wildcard-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-techtarget-com"]
+        regions     = ["us-east4", "global"]
+      }
+    }
+    tt-pr-iad-eng = {
+      wildcard-iad-eng-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-iad-eng-techtarget-com"]
+      }
+    }
+    tt-pr-iad-qa = {
+      wildcard-iad-qa-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-iad-qa-techtarget-com"]
+      }
+    }
+    tt-pr-iad-prod = {
+      wildcard-iad-techtarget-com = {
+        certificate = acme_certificate.certificate["wildcard-iad-techtarget-com"]
+      }
+    }
+  }
+}
