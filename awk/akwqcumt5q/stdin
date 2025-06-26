@@ -1,0 +1,5 @@
+apple,red
+banana,yellow
+grape,purple
+BEGIN { FS="," }
+{ print "Fruit:", $1, "- Color:", $2 }
