@@ -1,0 +1,4 @@
+top.u_dut.u_xxx_big.g_cpu[0]
+top.u_dut.u_xxx_big.g_cpu[1]
+top.u_dut.u_xxx_little.g_cpu[0]
+top.u_dut.u_xxx_little.g_cpu[1]

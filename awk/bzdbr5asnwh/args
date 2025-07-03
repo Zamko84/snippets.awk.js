@@ -1,0 +1,1 @@
+'/\.u_xxx_big\./{print 0} /\.u_xxx_little\./{print 1}'
