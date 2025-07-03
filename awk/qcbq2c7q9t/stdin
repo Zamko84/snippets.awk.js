@@ -1,0 +1,14 @@
+@export()
+@description('Infrastructure component identifier used for tagging Azure resources')
+type InfraId =
+  | 'acr'
+  | 'amg'
+  | 'ampls'
+  | 'vnet'
+  | 'vnet-rg'
+
+@export()
+@description('Infrastructure component identifier for resources which also need a name to be uniquely addressable')
+type InfraIdWithName =
+  | 'app-mapviz-backend-slot'
+  | 'app-mapviz-frontend-slot'
