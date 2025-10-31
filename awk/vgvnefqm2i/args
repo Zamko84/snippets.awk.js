@@ -1,0 +1,20 @@
+awk '{
+    # 从 JSON 的 apiKey 字段提取
+    if (match($0, /"apiKey":"[^"]*"/)) {
+        api_key = substr($0, RSTART+9, RLENGTH-11)
+        print api_key
+        exit
+    }
+    # 从 x-api-key 头部提取
+    else if (match($0, /x-api-key:[^[:space:]]*/)) {
+        api_key = substr($0, RSTART+11, RLENGTH-11)
+        print api_key
+        exit
+    }
+    # 从 apikey 字段提取
+    else if (match($0, /apikey:[^[:space:]]*/)) {
+        api_key = substr($0, RSTART+7, RLENGTH-7)
+        print api_key
+        exit
+    }
+}'
