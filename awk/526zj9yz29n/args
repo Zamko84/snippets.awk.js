@@ -1,0 +1,2 @@
+'BEGIN {printf "abc\tdef\n"} \
+ {print}'
