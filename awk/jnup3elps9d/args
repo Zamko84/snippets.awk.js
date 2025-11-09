@@ -1,0 +1,1 @@
+awk -f script.awk Lab03-data.csv
