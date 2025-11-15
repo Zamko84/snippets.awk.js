@@ -1,0 +1,1 @@
+-W random=number -F "[-,:; ]+" -F "[, ]+" '/George|^John/{print $NF ":", $1, $(NF-1)}'
