@@ -1,0 +1,12 @@
+-F, BEGIN {
+    RS = "\""; # Set record separator to double quote
+    ORS = "";   # Suppress default output record separator
+}
+{
+    if (NR % 2 == 0) { # Inside a quoted field (even-numbered records)
+        gsub(/\n/, "", $0); # Remove newlines
+        printf "\"%s\"", $0; # Re-add quotes and print
+    } else {           # Outside a quoted field (odd-numbered records)
+        printf "%s", $0; # Print as is
+    }
+}

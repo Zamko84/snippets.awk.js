@@ -1,0 +1,390 @@
+"Plugin","Plugin Name","Severity","Family","IP Address","DNS Name","Plugin Modification Date","Plugin Publication Date","Patch Publication Date","Security End of Life Date","Vuln Publication Date","Last Observed","First Discovered","Plugin Output"
+"10028","DNS Server BIND version Directive Remote Version Detection","Info","DNS","10.100.10.2","vm-idm-1.mgmt.site1.pki.local","Oct 12, 2022 12:00:00 UTC","Oct 12, 1999 12:00:00 UTC","N/A","N/A","N/A","Dec 8, 2025 22:42:39 UTC","Apr 2, 2025 18:19:57 UTC","Plugin Output: 
+  Version : 9.11.36-RedHat-9.11.36-16.el8_10.4"
+"10107","HTTP Server Type and Version","Info","Web Servers","10.100.10.2","vm-idm-1.mgmt.site1.pki.local","Oct 30, 2020 12:00:00 UTC","Jan 4, 2000 12:00:00 UTC","N/A","N/A","N/A","Dec 8, 2025 22:42:39 UTC","Apr 2, 2025 18:19:57 UTC","Plugin Output: The remote web server type is :
+
+Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1k mod_auth_gssapi/1.6.1 mod_wsgi/4.6.4 Python/3.6"
+"10107","HTTP Server Type and Version","Info","Web Servers","10.100.10.2","vm-idm-1.mgmt.site1.pki.local","Oct 30, 2020 12:00:00 UTC","Jan 4, 2000 12:00:00 UTC","N/A","N/A","N/A","Dec 8, 2025 22:42:39 UTC","Apr 2, 2025 18:19:57 UTC","Plugin Output: The remote web server type is :
+
+Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1k mod_auth_gssapi/1.6.1 mod_wsgi/4.6.4 Python/3.6"
+"10180","Ping the remote host","Info","Port scanners","10.100.10.2","vm-idm-1.mgmt.site1.pki.local","Feb 25, 2025 12:00:00 UTC","Jun 24, 1999 12:00:00 UTC","N/A","N/A","N/A","Dec 8, 2025 22:42:39 UTC","Apr 2, 2025 17:12:44 UTC","Plugin Output: The remote host is up
+The remote host replied to an ICMP echo packet"
+"10267","SSH Server Type and Version Information","Info","Service detection","10.100.10.2","vm-idm-1.mgmt.site1.pki.local","Jul 24, 2024 12:00:00 UTC","Oct 12, 1999 12:00:00 UTC","N/A","N/A","N/A","Dec 8, 2025 22:42:39 UTC","Apr 2, 2025 18:19:57 UTC","Plugin Output: 
+SSH version : SSH-2.0-OpenSSH_8.0
+SSH supported authentication : publickey,gssapi-keyex,gssapi-with-mic,password,keyboard-interactive
+SSH banner : 
+You are accessing a U.S. Government (USG) Information System (IS) that is provided for USG-authorized use only.
+
+By using this IS (which includes any device attached to this IS), you consent to the following conditions:
+
+-The USG routinely intercepts and monitors communications on this IS for purposes including, but not limited to, penetration testing, COMSEC monitoring, network operations and defense, personnel misconduct (PM), law enforcement (LE), and counterintelligence (CI) investigations.
+
+-At any time, the USG may inspect and seize data stored on this IS.
+
+-Communications using, or data stored on, this IS are not private, are subject to routine monitoring, interception, and search, and may be disclosed or used for any USG-authorized purpose.
+
+-This IS includes security measures (e.g., authentication and access controls) to protect USG interests--not for your personal benefit or privacy.
+
+-Notwithstanding the above, using this IS does not constitute consent to PM, LE or CI investigative searching or monitoring of the content of privileged communications, or work product, related to personal representation or services by attorneys, psychotherapists, or clergy, and their assistants. Such communications and work product are private and confidential. See User Agreement for details."
+"10287","Traceroute Information","Info","General","10.100.10.2","vm-idm-1.mgmt.site1.pki.local","Dec 4, 2023 12:00:00 UTC","Nov 27, 1999 12:00:00 UTC","N/A","N/A","N/A","Dec 8, 2025 22:42:39 UTC","Apr 2, 2025 18:19:57 UTC","Plugin Output: For your information, here is the traceroute from 10.100.11.249 to 10.100.10.2 : 
+10.100.11.249
+10.100.10.2
+
+Hop Count: 1"
+"10863","SSL Certificate Information","Info","General","10.100.10.2","vm-idm-1.mgmt.site1.pki.local","Feb 3, 2021 12:00:00 UTC","May 19, 2008 12:00:00 UTC","N/A","N/A","N/A","Dec 8, 2025 22:42:39 UTC","Apr 2, 2025 18:19:57 UTC","Plugin Output: Subject Name: 
+
+Organization: PKI.LOCAL
+Common Name: vm-idm-1.mgmt.site1.pki.local
+
+Issuer Name: 
+
+Organization: PKI.LOCAL
+Common Name: Certificate Authority
+
+Serial Number: 39 
+
+Version: 3
+
+Signature Algorithm: SHA-256 With RSA Encryption
+
+Not Valid Before: Jan 28 16:20:17 2025 GMT
+Not Valid After: Jan 29 16:20:17 2027 GMT
+
+Public Key Info: 
+
+Algorithm: RSA Encryption
+Key Length: 2048 bits
+Public Key: 00 D2 8D FE FA 2B 68 C4 3F 57 48 59 30 7E E7 15 6A 2C EA 9D 
+            98 2E B2 5A F1 29 55 11 0E BF D8 97 0F 6B AC 98 E3 3D 8C 94 
+            CE FA A9 8D 97 D0 4B FA 3D 9F 4A 95 C1 2B 62 1A 78 0B 38 63 
+            1A CD 98 88 E8 1C 78 54 EA 94 CD BD 77 86 56 69 56 CB E2 29 
+            13 0F 8A 35 F8 E8 FC 57 24 E7 E8 89 3B 79 54 BF 2F 8C F5 11 
+            5D 12 9B 6A 57 81 24 C5 7D 8C 6C C5 01 50 3A 38 F8 47 62 F5 
+            1B 46 07 28 72 2C 59 22 06 A0 DD DA 58 70 41 C4 0C 35 80 E7 
+            EE 15 4E 78 BD 75 D7 FA 2B 97 58 D9 44 DA A4 7E 36 43 87 CF 
+            59 42 47 2F 3B FA 84 B1 1D D1 88 32 43 BE 83 30 DD AA ED 6C 
+            F9 0C E9 F2 38 B9 99 3F 1A 6B EC 5E BD 35 E0 93 3A 98 1B 2A 
+            85 FD F6 6D 6D A0 BC 7F C9 46 37 47 41 7B 59 E6 A4 FF C6 77 
+            CF 7A 21 68 C9 9A 3D FC B9 D7 1B 05 4C C7 75 69 59 AD 79 BE 
+            7B 4A C1 2B F1 0D A1 94 1F D4 BB B4 77 6F 66 25 E1 
+Exponent: 01 00 01 
+
+Signature Length: 384 bytes / 3072 bits
+Signature: 00 20 4D BF FF C3 FF 3B 85 AB 47 9F 5F 4F 56 53 BF 59 69 B4 
+           77 49 15 9F 7C 2A 75 3F 20 EC AC 19 FA D3 57 C6 21 E6 D9 AC 
+           3F 7F 12 CB B8 5D C6 62 92 E6 A7 92 65 80 6A 13 64 3F 07 71 
+           BD 04 7C 5B 9B 46 26 FB 80 75 0B A8 19 4D 7A 94 D2 BA 00 88 
+           A2 FC 40 8F E9 0F 01 89 4A B6 7E 9F 84 9E 7F BB 0B 2B 04 17 
+           E1 B9 7F 0A D1 A0 34 F7 3A 87 A4 41 B5 9A CF EB 0B A6 A1 09 
+           B0 BD 33 A8 7F 79 85 E4 10 85 46 89 24 DD 6B 1D A3 88 68 5D 
+           35 1F 7A B7 66 E1 AA F7 1F 52 F1 D2 3A BB FD 8E 41 10 FC 76 
+           92 F2 CD D8 E3 08 4E B7 F6 AA 45 CF E7 AE E3 B7 57 98 99 4A 
+           E7 15 9D C7 9E 3E 77 40 1D 98 FA 98 1F 69 FA D6 9D 73 3A CB 
+           EC 4C C8 2E 12 E4 BE B4 C4 6B 94 AE 5F C6 2E 17 42 8A CF 3A 
+           70 56 12 6D 52 AF 67 DF 95 E0 6E B9 9E FF 8F 85 95 DC 5F 29 
+           0A 60 88 91 B8 5E 7F 11 14 DE E3 C9 94 46 F1 0C 18 DD 47 E1 
+           FF 03 06 B9 12 C5 7C 11 C1 86 32 1A E9 4E 48 95 C8 20 C4 A3 
+           D4 5F 11 FE 3C E7 94 CF 8A CB 45 0D 91 CA F0 73 98 5A EC 47 
+           3A BA 0C 77 42 02 4A B1 A1 AE BA AF 44 C1 5C 1D 27 D4 EB 66 
+           94 1B F1 E6 34 A3 FD 14 E9 B8 5E 48 C6 4D 86 72 C1 34 E8 52 
+           BC B0 4E C3 F3 EB 04 8F E8 03 D4 16 D4 1C 70 75 9C D4 2B 5B 
+           0D 8B 92 53 97 AF DA 0C 37 32 F3 59 A7 B3 86 3D 74 32 E9 05 
+           FA 15 75 5C 7F 
+
+Extension: Authority Key Identifier (2.5.29.35)
+Critical: 0
+Key Identifier: FE 1C 8E 32 67 BF DF FB 52 EB C4 FA 4F AA 47 41 FD BC A4 A9 
+
+
+Extension: Authority Information Access (1.3.6.1.5.5.7.1.1)
+Critical: 0
+Method#1: Online Certificate Status Protocol
+URI: http://ipa-ca.pki.local/ca/ocsp
+
+
+Extension: Key Usage (2.5.29.15)
+Critical: 1
+Key Usage: Digital Signature, Non Repudiation, Key Encipherment, Data Encipherment
+
+
+Extension: Extended Key Usage (2.5.29.37)
+Critical: 0
+Purpose#1: Web Server Authentication (1.3.6.1.5.5.7.3.1)
+Purpose#2: Web Client Authentication (1.3.6.1.5.5.7.3.2)
+
+
+Extension: CRL Distribution Points (2.5.29.31)
+Critical: 0
+URI: http://ipa-ca.pki.local/ipa/crl/MasterCRL.bin
+
+
+Extension: Subject Key Identifier (2.5.29.14)
+Critical: 0
+Subject Key Identifier: 44 02 89 06 43 EA 52 88 4D FC 35 72 AE C3 A5 8A B0 E5 93 CA 
+
+
+Extension: Subject Alternative Name (2.5.29.17)
+Critical: 0
+DNS: vm-idm-1.mgmt.site1.pki.local
+Other Name: 06 0A 2B 06 01 04 01 82 37 14 02 03 A0 2E 0C 2C 6C 64 61 70 
+            2F 76 6D 2D 69 64 6D 2D 31 2E 6D 67 6D 74 2E 73 69 74 65 31 
+            2E 70 6B 69 2E 6C 6F 63 61 6C 40 50 4B 49 2E 4C 4F 43 41 4C 
+Other Name: 06 06 2B 06 01 05 02 02 A0 41 30 3F A0 0B 1B 09 50 4B 49 2E 
+            4C 4F 43 41 4C A1 30 30 2E A0 03 02 01 01 A1 27 30 25 1B 04 
+            6C 64 61 70 1B 1D 76 6D 2D 69 64 6D 2D 31 2E 6D 67 6D 74 2E 
+            73 69 74 65 31 2E 70 6B 69 2E 6C 6F 63 61 6C 
+
+
+Fingerprints : 
+
+SHA-256 Fingerprint: 55 D5 8D 59 51 9D 31 5D 30 85 B6 9A F0 34 C5 CA F2 33 62 3D 
+                     44 A0 5A 42 B9 4D 14 FB 84 C2 74 3E 
+SHA-1 Fingerprint: 1D E3 FE F1 96 23 0B A0 26 08 F5 46 5C 67 92 65 8E A6 F5 72 
+MD5 Fingerprint: 2F EE 73 E1 25 96 B2 39 78 DF 0F 8F 71 23 3E E4 
+
+
+PEM certificate : 
+
+-----BEGIN CERTIFICATE-----
+MIIFSzCCA7OgAwIBAgIBOTANBgkqhkiG9w0BAQsFADA0MRIwEAYDVQQKDAlQS0kuTE9DQUwxHjAcBgNVBAMMFUNlcnRpZmljYXRlIEF1dGhvcml0eTAeFw0yNTAxMjgxNjIwMTdaFw0yNzAxMjkxNjIwMTdaMDwxEjAQBgNVBAoMCVBLSS5MT0NBTDEmMCQGA1UEAwwddm0taWRtLTEubWdtdC5zaXRlMS5wa2kubG9jYWwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDSjf76K2jEP1dIWTB+5xVqLOqdmC6yWvEpVREOv9iXD2usmOM9jJTO+qmNl9BL+j2fSpXBK2IaeAs4YxrNmIjoHHhU6pTNvXeGVmlWy+IpEw+KNfjo/Fck5+iJO3lUvy+M9RFdEptqV4EkxX2MbMUBUDo4+Edi9RtGByhyLFkiBqDd2lhwQcQMNYDn7hVOeL111/orl1jZRNqkfjZDh89ZQkcvO/qEsR3RiDJDvoMw3artbPkM6fI4uZk/GmvsXr014JM6mBsqhf32bW2gvH/JRjdHQXtZ5qT/xnfPeiFoyZo9/LnXGwVMx3VpWa15vntKwSvxDaGUH9S7tHdvZiXhAgMBAAGjggHeMIIB2jAfBgNVHSMEGDAWgBT+HI4yZ7/f+1LrxPpPqkdB/bykqTA7BggrBgEFBQcBAQQvMC0wKwYIKwYBBQUHMAGGH2h0dHA6Ly9pcGEtY2EucGtpLmxvY2FsL2NhL29jc3AwDgYDVR0PAQH/BAQDAgTwMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjB0BgNVHR8EbTBrMGmgMaAvhi1odHRwOi8vaXBhLWNhLnBraS5sb2NhbC9pcGEvY3JsL01hc3RlckNSTC5iaW6iNKQyMDAxDjAMBgNVBAoMBWlwYWNhMR4wHAYDVQQDDBVDZXJ0aWZpY2F0ZSBBdXRob3JpdHkwHQYDVR0OBBYEFEQCiQZD6lKITfw1cq7DpYqw5ZPKMIG1BgNVHREEga0wgaqCHXZtLWlkbS0xLm1nbXQuc2l0ZTEucGtpLmxvY2FsoDwGCisGAQQBgjcUAgOgLgwsbGRhcC92bS1pZG0tMS5tZ210LnNpdGUxLnBraS5sb2NhbEBQS0kuTE9DQUygSwYGKwYBBQICoEEwP6ALGwlQS0kuTE9DQUyhMDAuoAMCAQGhJzAlGwRsZGFwGx12bS1pZG0tMS5tZ210LnNpdGUxLnBraS5sb2NhbDANBgkqhkiG9w0BAQsFAAOCAYEAIE2//8P/O4WrR59fT1ZTv1lptHdJFZ98KnU/IOysGfrTV8Yh5tmsP38Sy7hdxmKS5qeSZYBqE2Q/B3G9BHxbm0Ym+4B1C6gZTXqU0roAiKL8QI/pDwGJSrZ+n4Sef7sLKwQX4bl/CtGgNPc6h6RBtZrP6wumoQmwvTOof3mF5BCFRokk3Wsdo4hoXTUferdm4ar3H1Lx0jq7/Y5BEPx2kvLN2OMITrf2qkXP567jt1eYmUrnFZ3Hnj53QB2Y+pgfafrWnXM6y+xMyC4S5L60xGuUrl/GLhdCis86cFYSbVKvZ9+V4G65nv+PhZXcXykKYIiRuF5/ERTe48mURvEMGN1H4f8DBrkSxXwRwYYyGulOSJXIIMSj1F8R/jznlM+Ky0UNkcrwc5ha7Ec6ugx3QgJKsaGuuq9EwVwdJ9TrZpQb8eY0o/0U6bheSMZNhnLBNOhSvLBOw/PrBI/oA9QW1BxwdZzUK1sNi5JTl6/aDDcy81mns4Y9dDLpBfoVdVx/
+-----END CERTIFICATE-----"
+"10863","SSL Certificate Information","Info","General","10.100.10.2","vm-idm-1.mgmt.site1.pki.local","Feb 3, 2021 12:00:00 UTC","May 19, 2008 12:00:00 UTC","N/A","N/A","N/A","Dec 8, 2025 22:42:39 UTC","Apr 2, 2025 18:19:57 UTC","Plugin Output: Subject Name: 
+
+Organization: PKI.LOCAL
+Common Name: vm-idm-1.mgmt.site1.pki.local
+
+Issuer Name: 
+
+Organization: PKI.LOCAL
+Common Name: Certificate Authority
+
+Serial Number: 3B 
+
+Version: 3
+
+Signature Algorithm: SHA-256 With RSA Encryption
+
+Not Valid Before: Jan 28 16:22:27 2025 GMT
+Not Valid After: Jan 29 16:22:27 2027 GMT
+
+Public Key Info: 
+
+Algorithm: RSA Encryption
+Key Length: 2048 bits
+Public Key: 00 C8 D3 F9 9C E2 05 B5 24 C1 D6 78 8F 24 ED DD A3 FC 23 E3 
+            09 D2 43 3B B3 BC 10 07 AA 10 F1 3A 6A B1 51 55 2A 4C FD 31 
+            89 E7 F3 E0 DC 79 AE 2A 64 A2 0F 79 6B 61 12 7A E5 A9 60 24 
+            9C D1 10 88 BD 73 76 7D 4D 69 37 27 6B 2D DA 93 63 08 D8 F8 
+            1B FE B1 0F D2 EF E8 D1 41 49 36 C7 BB ED 06 08 99 E3 84 56 
+            F0 99 7D C8 A2 78 A4 88 B0 0D F6 47 BE E7 6D 5C 08 7D 26 E3 
+            6F D1 7C FC 1A 08 C4 AA DA F1 4E 85 8C DE 70 05 A8 30 C0 62 
+            B7 B1 FE B0 DF 9D A6 F3 38 B0 6A 41 5F 3F 1D 62 77 8A 3D B6 
+            44 3E 08 D0 7E 0E B2 50 19 90 99 E3 CD AB 83 C4 46 EA 0D 97 
+            3B 3A 2A 97 91 64 B7 A5 17 34 D5 94 FC FF B1 2E D6 42 52 96 
+            A1 69 4B 24 11 91 50 C0 E5 01 35 7A D2 4A 46 B5 AE BC 77 0E 
+            54 77 6B 90 DE 38 1F 85 16 55 95 92 36 E7 ED 08 28 5E F9 E4 
+            5D 43 99 E8 CE 28 24 EB DC E9 DA B1 2D 5D 58 19 33 
+Exponent: 01 00 01 
+
+Signature Length: 384 bytes / 3072 bits
+Signature: 00 4C 85 B8 A0 A6 B5 F6 BB DA 24 B0 D4 2F 4E A0 0B DA 76 38 
+           A8 C6 76 6B 86 C9 2B C4 42 09 AD 50 6A CB DB 96 94 DA 2E 3F 
+           42 44 3D 13 37 71 0B 3F C9 24 4A BA 26 74 67 E3 2E ED 03 EC 
+           60 BB C4 D2 FB 37 CB D0 A6 63 FC 6E B1 00 A8 13 8B C7 7A 00 
+           0D 10 B0 C9 2C C8 D3 EF 65 5D 00 D3 DD F8 7E 3D FB 3D 61 0B 
+           31 75 C6 B1 D7 7E 81 7F D4 CF 34 AE 45 CB 8A 14 9D EB 4B 01 
+           C3 84 19 C2 08 C4 B0 B3 54 5D 6A B3 A6 4B 81 89 1B 0A C7 96 
+           B6 23 21 A7 E7 06 C0 F7 54 9F D5 19 0F 63 07 2D A2 95 5E 88 
+           6A 70 A3 30 82 5D 4F 9B 1B BF C8 8E C6 16 46 D7 DF 6C 08 07 
+           06 A2 8E D5 E4 67 1D AC 5A 45 8C 8A 52 D3 44 A0 07 93 D9 07 
+           E4 72 1F E5 39 42 DD A1 2F 92 F1 60 4B E9 B1 B4 B5 1F 1C EF 
+           7C 95 5D 98 6E CF FF 1D 60 D3 B4 DF F0 69 D4 08 E4 F5 46 46 
+           E6 98 F7 52 31 B3 F4 F6 AE 56 4B DB 83 B8 E3 8D 37 70 74 92 
+           47 99 8F 8F 5A A1 FA 9F 28 C7 76 F7 51 8C 54 A8 2B 32 2E 36 
+           32 C2 2B A8 E2 15 70 8E AB 83 09 64 37 0B D7 D5 10 9E 23 24 
+           D9 C6 F9 38 00 5B 30 70 5B E7 AC C9 3C CD 51 26 62 66 15 33 
+           F8 B7 E1 1D 1E CA 87 8E F7 59 A6 97 94 FE D7 19 DE 24 88 38 
+           9C 97 89 48 57 0B 5F 1D 17 46 96 91 61 57 A5 CB 37 10 A0 72 
+           C8 B7 11 2F 05 68 84 23 27 67 03 E9 A9 F6 32 62 1D 51 BB 5D 
+           29 BD 41 89 82 
+
+Extension: Authority Key Identifier (2.5.29.35)
+Critical: 0
+Key Identifier: FE 1C 8E 32 67 BF DF FB 52 EB C4 FA 4F AA 47 41 FD BC A4 A9 
+
+
+Extension: Authority Information Access (1.3.6.1.5.5.7.1.1)
+Critical: 0
+Method#1: Online Certificate Status Protocol
+URI: http://ipa-ca.pki.local/ca/ocsp
+
+
+Extension: Key Usage (2.5.29.15)
+Critical: 1
+Key Usage: Digital Signature, Non Repudiation, Key Encipherment, Data Encipherment
+
+
+Extension: Extended Key Usage (2.5.29.37)
+Critical: 0
+Purpose#1: Web Server Authentication (1.3.6.1.5.5.7.3.1)
+Purpose#2: Web Client Authentication (1.3.6.1.5.5.7.3.2)
+
+
+Extension: CRL Distribution Points (2.5.29.31)
+Critical: 0
+URI: http://ipa-ca.pki.local/ipa/crl/MasterCRL.bin
+
+
+Extension: Subject Key Identifier (2.5.29.14)
+Critical: 0
+Subject Key Identifier: 68 CB 4B B0 90 61 34 8D AD 8C 1A 2A ED 19 AC 27 EF 8B ED 22 
+
+
+Extension: Subject Alternative Name (2.5.29.17)
+Critical: 0
+DNS: vm-idm-1.mgmt.site1.pki.local
+DNS: ipa-ca.pki.local
+Other Name: 06 0A 2B 06 01 04 01 82 37 14 02 03 A0 2E 0C 2C 48 54 54 50 
+            2F 76 6D 2D 69 64 6D 2D 31 2E 6D 67 6D 74 2E 73 69 74 65 31 
+            2E 70 6B 69 2E 6C 6F 63 61 6C 40 50 4B 49 2E 4C 4F 43 41 4C 
+Other Name: 06 06 2B 06 01 05 02 02 A0 41 30 3F A0 0B 1B 09 50 4B 49 2E 
+            4C 4F 43 41 4C A1 30 30 2E A0 03 02 01 01 A1 27 30 25 1B 04 
+            48 54 54 50 1B 1D 76 6D 2D 69 64 6D 2D 31 2E 6D 67 6D 74 2E 
+            73 69 74 65 31 2E 70 6B 69 2E 6C 6F 63 61 6C 
+
+
+Fingerprints : 
+
+SHA-256 Fingerprint: 98 44 68 3B DC EE C9 54 B4 51 36 E2 AF EF 9D 5E F7 CD 2E 6C 
+                     20 CE 91 AF 22 C3 4F F3 A2 6C 84 7F 
+SHA-1 Fingerprint: B8 DD C6 29 14 C7 05 A2 B5 26 85 7B 72 79 A6 14 24 FF 58 DF 
+MD5 Fingerprint: A0 7C 26 D4 1B 81 5F 55 43 07 2B F8 A8 3A 11 13 
+
+
+PEM certificate : 
+
+-----BEGIN CERTIFICATE-----
+MIIFXTCCA8WgAwIBAgIBOzANBgkqhkiG9w0BAQsFADA0MRIwEAYDVQQKDAlQS0kuTE9DQUwxHjAcBgNVBAMMFUNlcnRpZmljYXRlIEF1dGhvcml0eTAeFw0yNTAxMjgxNjIyMjdaFw0yNzAxMjkxNjIyMjdaMDwxEjAQBgNVBAoMCVBLSS5MT0NBTDEmMCQGA1UEAwwddm0taWRtLTEubWdtdC5zaXRlMS5wa2kubG9jYWwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDI0/mc4gW1JMHWeI8k7d2j/CPjCdJDO7O8EAeqEPE6arFRVSpM/TGJ5/Pg3HmuKmSiD3lrYRJ65algJJzREIi9c3Z9TWk3J2st2pNjCNj4G/6xD9Lv6NFBSTbHu+0GCJnjhFbwmX3IonikiLAN9ke+521cCH0m42/RfPwaCMSq2vFOhYzecAWoMMBit7H+sN+dpvM4sGpBXz8dYneKPbZEPgjQfg6yUBmQmePNq4PERuoNlzs6KpeRZLelFzTVlPz/sS7WQlKWoWlLJBGRUMDlATV60kpGta68dw5Ud2uQ3jgfhRZVlZI25+0IKF755F1DmejOKCTr3OnasS1dWBkzAgMBAAGjggHwMIIB7DAfBgNVHSMEGDAWgBT+HI4yZ7/f+1LrxPpPqkdB/bykqTA7BggrBgEFBQcBAQQvMC0wKwYIKwYBBQUHMAGGH2h0dHA6Ly9pcGEtY2EucGtpLmxvY2FsL2NhL29jc3AwDgYDVR0PAQH/BAQDAgTwMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjB0BgNVHR8EbTBrMGmgMaAvhi1odHRwOi8vaXBhLWNhLnBraS5sb2NhbC9pcGEvY3JsL01hc3RlckNSTC5iaW6iNKQyMDAxDjAMBgNVBAoMBWlwYWNhMR4wHAYDVQQDDBVDZXJ0aWZpY2F0ZSBBdXRob3JpdHkwHQYDVR0OBBYEFGjLS7CQYTSNrYwaKu0ZrCfvi+0iMIHHBgNVHREEgb8wgbyCHXZtLWlkbS0xLm1nbXQuc2l0ZTEucGtpLmxvY2FsghBpcGEtY2EucGtpLmxvY2FsoDwGCisGAQQBgjcUAgOgLgwsSFRUUC92bS1pZG0tMS5tZ210LnNpdGUxLnBraS5sb2NhbEBQS0kuTE9DQUygSwYGKwYBBQICoEEwP6ALGwlQS0kuTE9DQUyhMDAuoAMCAQGhJzAlGwRIVFRQGx12bS1pZG0tMS5tZ210LnNpdGUxLnBraS5sb2NhbDANBgkqhkiG9w0BAQsFAAOCAYEATIW4oKa19rvaJLDUL06gC9p2OKjGdmuGySvEQgmtUGrL25aU2i4/QkQ9EzdxCz/JJEq6JnRn4y7tA+xgu8TS+zfL0KZj/G6xAKgTi8d6AA0QsMksyNPvZV0A0934fj37PWELMXXGsdd+gX/UzzSuRcuKFJ3rSwHDhBnCCMSws1RdarOmS4GJGwrHlrYjIafnBsD3VJ/VGQ9jBy2ilV6IanCjMIJdT5sbv8iOxhZG199sCAcGoo7V5GcdrFpFjIpS00SgB5PZB+RyH+U5Qt2hL5LxYEvpsbS1HxzvfJVdmG7P/x1g07Tf8GnUCOT1RkbmmPdSMbP09q5WS9uDuOONN3B0kkeZj49aofqfKMd291GMVKgrMi42MsIrqOIVcI6rgwlkNwvX1RCeIyTZxvk4AFswcFvnrMk8zVEmYmYVM/i34R0eyoeO91mml5T+1xneJIg4nJeJSFcLXx0XRpaRYVelyzcQoHLItxEvBWiEIydnA+mp9jJiHVG7XSm9QYmC
+-----END CERTIFICATE-----"
+"10863","SSL Certificate Information","Info","General","10.100.10.2","vm-idm-1.mgmt.site1.pki.local","Feb 3, 2021 12:00:00 UTC","May 19, 2008 12:00:00 UTC","N/A","N/A","N/A","Dec 8, 2025 22:42:39 UTC","Apr 2, 2025 18:19:57 UTC","Plugin Output: Subject Name: 
+
+Organization: PKI.LOCAL
+Common Name: vm-idm-1.mgmt.site1.pki.local
+
+Issuer Name: 
+
+Organization: PKI.LOCAL
+Common Name: Certificate Authority
+
+Serial Number: 39 
+
+Version: 3
+
+Signature Algorithm: SHA-256 With RSA Encryption
+
+Not Valid Before: Jan 28 16:20:17 2025 GMT
+Not Valid After: Jan 29 16:20:17 2027 GMT
+
+Public Key Info: 
+
+Algorithm: RSA Encryption
+Key Length: 2048 bits
+Public Key: 00 D2 8D FE FA 2B 68 C4 3F 57 48 59 30 7E E7 15 6A 2C EA 9D 
+            98 2E B2 5A F1 29 55 11 0E BF D8 97 0F 6B AC 98 E3 3D 8C 94 
+            CE FA A9 8D 97 D0 4B FA 3D 9F 4A 95 C1 2B 62 1A 78 0B 38 63 
+            1A CD 98 88 E8 1C 78 54 EA 94 CD BD 77 86 56 69 56 CB E2 29 
+            13 0F 8A 35 F8 E8 FC 57 24 E7 E8 89 3B 79 54 BF 2F 8C F5 11 
+            5D 12 9B 6A 57 81 24 C5 7D 8C 6C C5 01 50 3A 38 F8 47 62 F5 
+            1B 46 07 28 72 2C 59 22 06 A0 DD DA 58 70 41 C4 0C 35 80 E7 
+            EE 15 4E 78 BD 75 D7 FA 2B 97 58 D9 44 DA A4 7E 36 43 87 CF 
+            59 42 47 2F 3B FA 84 B1 1D D1 88 32 43 BE 83 30 DD AA ED 6C 
+            F9 0C E9 F2 38 B9 99 3F 1A 6B EC 5E BD 35 E0 93 3A 98 1B 2A 
+            85 FD F6 6D 6D A0 BC 7F C9 46 37 47 41 7B 59 E6 A4 FF C6 77 
+            CF 7A 21 68 C9 9A 3D FC B9 D7 1B 05 4C C7 75 69 59 AD 79 BE 
+            7B 4A C1 2B F1 0D A1 94 1F D4 BB B4 77 6F 66 25 E1 
+Exponent: 01 00 01 
+
+Signature Length: 384 bytes / 3072 bits
+Signature: 00 20 4D BF FF C3 FF 3B 85 AB 47 9F 5F 4F 56 53 BF 59 69 B4 
+           77 49 15 9F 7C 2A 75 3F 20 EC AC 19 FA D3 57 C6 21 E6 D9 AC 
+           3F 7F 12 CB B8 5D C6 62 92 E6 A7 92 65 80 6A 13 64 3F 07 71 
+           BD 04 7C 5B 9B 46 26 FB 80 75 0B A8 19 4D 7A 94 D2 BA 00 88 
+           A2 FC 40 8F E9 0F 01 89 4A B6 7E 9F 84 9E 7F BB 0B 2B 04 17 
+           E1 B9 7F 0A D1 A0 34 F7 3A 87 A4 41 B5 9A CF EB 0B A6 A1 09 
+           B0 BD 33 A8 7F 79 85 E4 10 85 46 89 24 DD 6B 1D A3 88 68 5D 
+           35 1F 7A B7 66 E1 AA F7 1F 52 F1 D2 3A BB FD 8E 41 10 FC 76 
+           92 F2 CD D8 E3 08 4E B7 F6 AA 45 CF E7 AE E3 B7 57 98 99 4A 
+           E7 15 9D C7 9E 3E 77 40 1D 98 FA 98 1F 69 FA D6 9D 73 3A CB 
+           EC 4C C8 2E 12 E4 BE B4 C4 6B 94 AE 5F C6 2E 17 42 8A CF 3A 
+           70 56 12 6D 52 AF 67 DF 95 E0 6E B9 9E FF 8F 85 95 DC 5F 29 
+           0A 60 88 91 B8 5E 7F 11 14 DE E3 C9 94 46 F1 0C 18 DD 47 E1 
+           FF 03 06 B9 12 C5 7C 11 C1 86 32 1A E9 4E 48 95 C8 20 C4 A3 
+           D4 5F 11 FE 3C E7 94 CF 8A CB 45 0D 91 CA F0 73 98 5A EC 47 
+           3A BA 0C 77 42 02 4A B1 A1 AE BA AF 44 C1 5C 1D 27 D4 EB 66 
+           94 1B F1 E6 34 A3 FD 14 E9 B8 5E 48 C6 4D 86 72 C1 34 E8 52 
+           BC B0 4E C3 F3 EB 04 8F E8 03 D4 16 D4 1C 70 75 9C D4 2B 5B 
+           0D 8B 92 53 97 AF DA 0C 37 32 F3 59 A7 B3 86 3D 74 32 E9 05 
+           FA 15 75 5C 7F 
+
+Extension: Authority Key Identifier (2.5.29.35)
+Critical: 0
+Key Identifier: FE 1C 8E 32 67 BF DF FB 52 EB C4 FA 4F AA 47 41 FD BC A4 A9 
+
+
+Extension: Authority Information Access (1.3.6.1.5.5.7.1.1)
+Critical: 0
+Method#1: Online Certificate Status Protocol
+URI: http://ipa-ca.pki.local/ca/ocsp
+
+
+Extension: Key Usage (2.5.29.15)
+Critical: 1
+Key Usage: Digital Signature, Non Repudiation, Key Encipherment, Data Encipherment
+
+
+Extension: Extended Key Usage (2.5.29.37)
+Critical: 0
+Purpose#1: Web Server Authentication (1.3.6.1.5.5.7.3.1)
+Purpose#2: Web Client Authentication (1.3.6.1.5.5.7.3.2)
+
+
+Extension: CRL Distribution Points (2.5.29.31)
+Critical: 0
+URI: http://ipa-ca.pki.local/ipa/crl/MasterCRL.bin
+
+
+Extension: Subject Key Identifier (2.5.29.14)
+Critical: 0
+Subject Key Identifier: 44 02 89 06 43 EA 52 88 4D FC 35 72 AE C3 A5 8A B0 E5 93 CA 
+
+
+Extension: Subject Alternative Name (2.5.29.17)
+Critical: 0
+DNS: vm-idm-1.mgmt.site1.pki.local
+Other Name: 06 0A 2B 06 01 04 01 82 37 14 02 03 A0 2E 0C 2C 6C 64 61 70 
+            2F 76 6D 2D 69 64 6D 2D 31 2E 6D 67 6D 74 2E 73 69 74 65 31 
+            2E 70 6B 69 2E 6C 6F 63 61 6C 40 50 4B 49 2E 4C 4F 43 41 4C 
+Other Name: 06 06 2B 06 01 05 02 02 A0 41 30 3F A0 0B 1B 09 50 4B 49 2E 
+            4C 4F 43 41 4C A1 30 30 2E A0 03 02 01 01 A1 27 30 25 1B 04 
+            6C 64 61 70 1B 1D 76 6D 2D 69 64 6D 2D 31 2E 6D 67 6D 74 2E 
+            73 69 74 65 31 2E 70 6B 69 2E 6C 6F 63 61 6C 
+
+
+Fingerprints : 
+
+SHA-256 Fingerprint: 55 D5 8D 59 51 9D 31 5D 30 85 B6 9A F0 34 C5 CA F2 33 62 3D 
+                     44 A0 5A 42 B9 4D 14 FB 84 C2 74 3E 
+SHA-1 Fingerprint: 1D E3 FE F1 96 23 0B A0 26 08 F5 46 5C 67 92 65 8E A6 F5 72 
+MD5 Fingerprint: 2F EE 73 E1 25 96 B2 39 78 DF 0F 8F 71 23 3E E4 
+
+
+PEM certificate : 
+
+-----BEGIN CERTIFICATE-----
+MIIFSzCCA7OgAwIBAgIBOTANBgkqhkiG9w0BAQsFADA0MRIwEAYDVQQKDAlQS0kuTE9DQUwxHjAcBgNVBAMMFUNlcnRpZmljYXRlIEF1dGhvcml0eTAeFw0yNTAxMjgxNjIwMTdaFw0yNzAxMjkxNjIwMTdaMDwxEjAQBgNVBAoMCVBLSS5MT0NBTDEmMCQGA1UEAwwddm0taWRtLTEubWdtdC5zaXRlMS5wa2kubG9jYWwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDSjf76K2jEP1dIWTB+5xVqLOqdmC6yWvEpVREOv9iXD2usmOM9jJTO+qmNl9BL+j2fSpXBK2IaeAs4YxrNmIjoHHhU6pTNvXeGVmlWy+IpEw+KNfjo/Fck5+iJO3lUvy+M9RFdEptqV4EkxX2MbMUBUDo4+Edi9RtGByhyLFkiBqDd2lhwQcQMNYDn7hVOeL111/orl1jZRNqkfjZDh89ZQkcvO/qEsR3RiDJDvoMw3artbPkM6fI4uZk/GmvsXr014JM6mBsqhf32bW2gvH/JRjdHQXtZ5qT/xnfPeiFoyZo9/LnXGwVMx3VpWa15vntKwSvxDaGUH9S7tHdvZiXhAgMBAAGjggHeMIIB2jAfBgNVHSMEGDAWgBT+HI4yZ7/f+1LrxPpPqkdB/bykqTA7BggrBgEFBQcBAQQvMC0wKwYIKwYBBQUHMAGGH2h0dHA6Ly9pcGEtY2EucGtpLmxvY2FsL2NhL29jc3AwDgYDVR0PAQH/BAQDAgTwMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjB0BgNVHR8EbTBrMGmgMaAvhi1odHRwOi8vaXBhLWNhLnBraS5sb2NhbC9pcGEvY3JsL01hc3RlckNSTC5iaW6iNKQyMDAxDjAMBgNVBAoMBWlwYWNhMR4wHAYDVQQDDBVDZXJ0aWZpY2F0ZSBBdXRob3JpdHkwHQYDVR0OBBYEFEQCiQZD6lKITfw1cq7DpYqw5ZPKMIG1BgNVHREEga0wgaqCHXZtLWlkbS0xLm1nbXQuc2l0ZTEucGtpLmxvY2FsoDwGCisGAQQBgjcUAgOgLgwsbGRhcC92bS1pZG0tMS5tZ210LnNpdGUxLnBraS5sb2NhbEBQS0kuTE9DQUygSwYGKwYBBQICoEEwP6ALGwlQS0kuTE9DQUyhMDAuoAMCAQGhJzAlGwRsZGFwGx12bS1pZG0tMS5tZ210LnNpdGUxLnBraS5sb2NhbDANBgkqhkiG9w0BAQsFAAOCAYEAIE2//8P/O4WrR59fT1ZTv1lptHdJFZ98KnU/IOysGfrTV8Yh5tmsP38Sy7hdxmKS5qeSZYBqE2Q/B3G9BHxbm0Ym+4B1C6gZTXqU0roAiKL8QI/pDwGJSrZ+n4Sef7sLKwQX4bl/CtGgNPc6h6RBtZrP6wumoQmwvTOof3mF5BCFRokk3Wsdo4hoXTUferdm4ar3H1Lx0jq7/Y5BEPx2kvLN2OMITrf2qkXP567jt1eYmUrnFZ3Hnj53QB2Y+pgfafrWnXM6y+xMyC4S5L60xGuUrl/GLhdCis86cFYSbVKvZ9+V4G65nv+PhZXcXykKYIiRuF5/ERTe48mURvEMGN1H4f8DBrkSxXwRwYYyGulOSJXIIMSj1F8R/jznlM+Ky0UNkcrwc5ha7Ec6ugx3QgJKsaGuuq9EwVwdJ9TrZpQb8eY0o/0U6bheSMZNhnLBNOhSvLBOw/PrBI/oA9QW1BxwdZzUK1sNi5JTl6/aDDcy81mns4Y9dDLpBfoVdVx/
+-----END CERTIFICATE-----"
+"10881","SSH Protocol Versions Supported","Info","General","10.100.10.2","vm-idm-1.mgmt.site1.pki.local","Jul 24, 2024 12:00:00 UTC","Mar 6, 2002 12:00:00 UTC","N/A","N/A","N/A","Dec 8, 2025 22:42:39 UTC","Apr 2, 2025 18:19:57 UTC","Plugin Output: The remote SSH daemon supports the following versions of the
+SSH protocol :
+
+  - 1.99
+  - 2.0"
