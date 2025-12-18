@@ -1,0 +1,17 @@
+[package]
+name = "someapp"
+version = "1.2.2"
+edition = "2021"
+description = "It's an app"
+
+[lib]
+name = "somelubrary"
+path = "src/lib.rs"
+
+[[bin]]
+name = "someapp"
+path = "src/main.rs"
+
+[dependencies]
+csv = { version = "1.2.3", features = ["derive"] }
+chrono = "0.4.42"
