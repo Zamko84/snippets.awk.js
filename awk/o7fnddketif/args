@@ -1,0 +1,1 @@
+awk 'BEGIN {FS="[[:space:]]"; ORS=" "} {for (i=1; i<=NF; i++) if ($i!="KILL" && $i!="STOP") print $i}'
