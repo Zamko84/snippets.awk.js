@@ -1,0 +1,6 @@
+3242    tmux new-session -s myapp './my-app/MyApp'
+3241    strace -fostrace.out tmux new
+3240    https://github.com/tmux/tmux/issues/2377
+3239    pkill tmux
+3238    error connecting to /tmp/tmux-1000/default (No such file or directory)
+3237    error connecting to /tmp/tmux-1000/default
