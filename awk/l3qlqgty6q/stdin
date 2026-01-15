@@ -1,0 +1,20 @@
+REPLACE these left-panel contents with those of your class list (Use ON-SCREEN option ). 
+The right panel will have your list properly formatted for Webwork.
+You can then paste into a text editor like Notepad or TextEdit and save it as an lst file.
+	
+BLABLABLA
+ 
+Class List
+201-111-123 Differential Calculus class 00002
+
+Display: 
+All students
+Student ID 	Section 	Last name, First name 
+2229311	00001	Baba, Ali *
+3314791	00001	Einstein, Albert *
+2592219	00001	Gauss, Carl 
+1466849	00002	Lebniz, Gottfried*
+6344491	00003	Newton, Isaac
+1414968	00001	Riemann, Bernard *
+
+MORE TEXT TO IGNORE

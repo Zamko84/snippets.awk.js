@@ -1,0 +1,1 @@
+'BEGIN{FS=" \t|, |\t"}  {if ($1 ~ /^[0-9]+$/) {{printf $1 "," }{printf $3} {sub(" \*","",$4);sub("\*","",$4) ; printf ","$4}  {print ",C,," substr($2,length($2)-1) ",,"$1"@johnabbottcollege.net," $1 ",,0"}}}'
