@@ -1,0 +1,7 @@
+hello
+
+FOO="
+mawk: could not create a new process (Resource temporarily unavailable)
+"
+
+there

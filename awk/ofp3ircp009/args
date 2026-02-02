@@ -1,0 +1,1 @@
+'BEGIN{q="\""} !done && /^FOO=""$/ { print "FOO=" q; system("cat foo.txt"); print q; done=1; next } { print }'
