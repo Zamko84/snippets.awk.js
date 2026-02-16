@@ -1,0 +1,11 @@
+Nmap scan report for test-AII-PC020 (10.40.100.224) [host down]
+Nmap scan report for test-AII-PC024 (10.40.100.231) [host down]
+Nmap scan report for test-AII-PC025 (10.40.101.13)
+Host is up (0.0046s latency).
+MAC Address: 04:D9:F5:53:5C:B4 (ASUSTek Computer)
+Nmap scan report for test-AII-PC026 (10.40.100.179)
+Host is up (0.0034s latency).
+MAC Address: 04:D9:F5:53:5B:BE (ASUSTek Computer)
+Nmap scan report for test-BHR-PC018 (10.40.101.148) [host down]
+Other addresses for test-BHR-PC018 (not scanned): 10.40.101.165
+Nmap scan report for test-BHR-PC019 (10.40.101.150) [host down]

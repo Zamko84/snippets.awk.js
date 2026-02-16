@@ -1,0 +1,11 @@
+'{
+    if ($0 ~ /^Nmap scan report for/) {
+    name = $0;
+    sub(/^Nmap scan report for /, "", name);
+    sub(/ .*$/, "", name);
+    
+    print name 
+    }
+    
+}
+'
