@@ -1,0 +1,1 @@
+'BEGIN {count=0} NF > 0 && !/([a-z]|\(AP\))/ {print $0;count++} END {print "Gamecount: "count " (with Lead) " ++count}'
