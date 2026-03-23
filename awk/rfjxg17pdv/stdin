@@ -1,0 +1,463 @@
+7. VJEŽBA: Konfiguracija OSPF usmjerničkog protokola
+
+Tema: Usmjernički protokoli – dinamičko usmjeravanje (OSPF)
+
+Predmet: Računalne mreže
+
+Razred: 3. razred srednje škole
+
+Vrijeme izvođenja: 2 školska sata (2 × 45 min)
+
+Alat: Cisco Packet Tracer
+
+---
+
+1. CILJ VJEŽBE
+
+Nakon završetka vježbe, učenik će znati:
+
+· Povezati odgovarajućim kabelima mrežne uređaje međusobno, te mrežne uređaje i računala.
+
+· Upisati osnovnu konfiguraciju usmjernika za rad u mreži (hostname, IP adrese, uključivanje sučelja).
+
+· Pokrenuti OSPF usmjernički protokol na usmjerniku i pripadajućim sučeljima.
+
+· Analizirati sadržaj usmjerničke tablice, tablice susjeda i LSDB baze podataka.
+
+· Provjeriti konfiguraciju usmjernika osnovnim show naredbama.
+
+· Provjeriti povezanost između računala u mreži alatima ping i traceroute.
+
+---
+
+2. POTREBNI RESURSI
+
+Hardver (u simulatoru Packet Tracer):
+
+· 2 Cisco usmjernika (npr. model 1941 ili Router-PT) – nazivi: R1 i R2
+
+· 1 Cisco preklopnik (switch, npr. model 2960) – naziv: Switch0
+
+· 2 osobna računala (PC0 i PC1)
+
+Kabeli:
+
+· 2 × ravni UTP kabel (Copper Straight-Through) za veze: PC0–Switch0, Switch0–R1,
+
+· 1 × upletena parica (Copper Cross-Over) R2–PC1.
+
+· 1 × serijski kabel (Serial DCE) za WAN vezu između usmjernika: R1–R2.
+
+Prethodna znanja:
+
+· Razlika između statičkog i dinamičkog usmjeravanja.
+
+· Uloga usmjerničke tablice (routing table).
+
+· Osnovno konfiguriranje IPv4 adresa na sučeljima usmjernika i mrežnih kartica računala.
+
+---
+
+3. TEORIJSKA OSNOVA
+
+3.1 Usmjernički protokoli i „Link-State“
+
+Usmjernički protokoli omogućuju usmjernicima da automatski razmjenjuju informacije o dostupnim mrežama, umjesto ručnog (statičkog) upisivanja svih putanja od strane administratora.
+
+OSPF (Open Shortest Path First) je link-state usmjernički protokol. Svaki usmjernik šalje informacije o stanju svojih veza (linkova) susjedima pomoću LSA paketa (Link State Advertisements). Svi usmjernici u istom OSPF području (Area) imaju identičnu LSDB (Link State Database) – potpunu sliku topologije mreže, te koriste SPF (Dijkstra) algoritam za izračun najkraćih putanja.
+
+3.2 OSPF tablice i metrika
+
+OSPF održava tri ključne tablice:
+
+1. Tablica susjeda (Neighbor table): Popis susjednih usmjernika s kojima je uspostavljena OSPF veza. (Naredba: show ip ospf neighbor)
+
+2. Topološka tablica (LSDB): Baza svih linkova i čvorova u OSPF području. (Naredba: show ip ospf database)
+
+3. Usmjernička tablica (Routing table): Najbolje rute izračunate iz LSDB-a, označene slovom O. (Naredba: show ip route ospf)
+
+Metrika (Cost):
+
+OSPF koristi Cost (cijenu/trošak) koji se temelji na propusnosti (bandwidth) sučelja. Standardna formula je:
+
+Cost = Reference Bandwidth / Interface Bandwidth (Zadano: 100 Mb/s / brzina linka)
+
+· FastEthernet (100 Mb/s) → Cost = 1
+
+· Serijski link (npr. 64 kb/s) → Cost = 1562
+
+---
+
+4. OPIS ZADATKA, TOPOLOGIJA I ADRESNI PLAN
+
+Topologija spajanja:
+
+· PC0 ↔ Switch0 (ravni UTP kabel, FastEthernet sučelja)
+
+· Switch0 ↔ R1 (ravni UTP kabel, Fa0/1 ↔ Fa0/0)
+
+· R1 ↔ R2 (serijski DCE/DTE kabel, Serial2/0 ↔ Serial2/0)
+
+· R2 ↔ PC1 (križni UTP kabel, Fa0/0 ↔ FastEthernet0)
+
+Adresni plan:
+
+Pretpostavit ćemo da Switch0 (u nastavku Switch1) ima portove Fa0/1, Fa0/2, … Koristi bakreni straight-through kabel za sve Ethernet veze.
+
+1. PC0 → Switch1
+
+· PC0 FastEthernet0 → Switch1 FastEthernet0/2
+
+2. Switch1 → Router1
+
+· Switch1 FastEthernet0/1 → Router1 FastEthernet0/0
+
+3. Adrese
+
+· Router1 Fa0/0 = 192.168.10.1
+
+· PC0 = 192.168.10.10, gateway 192.168.10.1
+
+WAN – Router1 do Router2 (serijski link)
+
+Koristi Serial DCE/DTE kabel.
+
+4. Router1 → Router2
+
+· Router1 Serial2/0 = 10.0.0.1
+
+· Router2 Serial2/0 (ili Serial3/0, kako odlučite) = 10.0.0.2
+
+· Na onoj strani gdje je DCE obavezno postavi clock rate (npr. 64000).
+
+· Za provjeru DCE strane koristi: show controllers serial 2/0.
+
+LAN2 – PC1 do Router2
+
+1. PC1 → Router2
+
+· PC1 FastEthernet0 → Router2 FastEthernet0/0
+
+2. Adrese
+
+· Router2 Fa0/0 = 192.168.20.1 /24
+
+· PC1 = 192.168.20.10, gateway 192.168.20.1
+
+
+Uređaj Sučelje IPv4 Adresa Mrežna maska Zadani pristupnik (Gateway)
+
+R1 Fa0/0 (LAN1) 192.168.10.1 255.255.255.0 -
+
+R1 Serial2/0 (WAN) 10.0.0.1 255.255.255.252 -
+
+R2 Fa0/0 (LAN2) 192.168.20.1 255.255.255.0 -
+
+R2 Serial2/0 (WAN) 10.0.0.2 255.255.255.252 -
+
+PC0 Fa0/0 192.168.10.10 255.255.255.0 192.168.10.1
+
+PC1 Fa0/0 192.168.20.10 255.255.255.0 192.168.20.1
+
+(Napomena: Oznake sučelja poput Fa0/0 ili Serial2/0 ovise o modelu usmjernika u simulatoru; prilagodite ih po potrebi).
+
+---
+
+5. KORACI ZA IZVOĐENJE VJEŽBE
+
+KORAK 1: Izrada topologije i fizičko povezivanje
+
+1. Pokrenite Cisco Packet Tracer i kreirajte novu praznu radnu površinu.
+
+2. Dodajte uređaje: R1, R2, Switch0 i računala PC0, PC1.
+
+3. Povežite uređaje kabelima točno prema specifikaciji iz adresnog plana.
+
+4. Pričekajte da LED indikatori postanu zeleni na aktivnim Ethernet linkovima.
+
+KORAK 2: Osnovna konfiguracija usmjernika (hostname)
+
+Otvorite CLI usmjernika (dvoklik na R1 → kartica CLI). Ako se pojavi initial configuration dialog, upišite no.
+
+Na usmjerniku R1:
+
+
+Router> enable
+
+Router# configure terminal
+
+Router(config)# hostname R1
+
+R1(config)# no ip domain-lookup
+
+Na usmjerniku R2:
+
+
+Router> enable
+
+Router# configure terminal
+
+Router(config)# hostname R2
+
+R2(config)# no ip domain-lookup
+
+KORAK 3: Konfiguriranje IPv4 adresa na usmjernicima
+
+Na usmjerniku R1:
+
+
+R1(config)# interface FastEthernet0/0
+
+R1(config-if)# ip address 192.168.10.1 255.255.255.0
+
+R1(config-if)# no shutdown
+
+R1(config-if)# exit
+
+
+R1(config)# interface Serial2/0
+
+R1(config-if)# ip address 10.0.0.1 255.255.255.252
+
+R1(config-if)# clock rate 64000
+
+R1(config-if)# no shutdown
+
+R1(config-if)# exit
+
+(Napomena: Naredba clock rate 64000 unosi se samo na onom usmjerniku na koji je spojen DCE kraj serijskog kabela – označen ikonom malog sata u simulatoru).
+
+Na usmjerniku R2:
+
+
+R2(config)# interface FastEthernet0/0
+
+R2(config-if)# ip address 192.168.20.1 255.255.255.0
+
+R2(config-if)# no shutdown
+
+R2(config-if)# exit
+
+
+R2(config)# interface Serial2/0
+
+R2(config-if)# ip address 10.0.0.2 255.255.255.252
+
+R2(config-if)# no shutdown
+
+R2(config-if)# exit
+
+Provjera: Na oba usmjernika upišite show ip interface brief. Sva korištena sučelja moraju imati status up / up.
+
+
+
+KORAK 4: Konfiguriranje mrežnih postavki računala
+
+Unesite IP parametre na računalima (Desktop → IP Configuration) prema Adresnom planu (Tablica u sekciji 4). Na PC0 (Desktop → IP Configuration) upišite:
+
+· IPv4 Address: 192.168.10.10
+
+· Subnet Mask: 255.255.255.0
+
+· Default Gateway: 192.168.10.1
+
+Na PC1 (Desktop → IP Configuration) upišite:
+
+· IPv4 Address: 192.168.20.10
+
+· Subnet Mask: 255.255.255.0
+
+· Default Gateway: 192.168.20.1
+
+Test lokalne povezanosti:
+
+Iz PC0 pingajte svoj zadani pristupnik: ping 192.168.10.1
+
+Iz PC1 pingajte svoj zadani pristupnik: ping 192.168.20.1
+
+
+KORAK 5: Pokretanje OSPF protokola na usmjernicima
+
+Na usmjerniku R1:
+
+
+R1(config)# router ospf 1
+
+R1(config-router)# router-id 1.1.1.1
+
+R1(config-router)# network 192.168.10.0 0.0.0.255 area 0
+
+R1(config-router)# network 10.0.0.0 0.0.0.3 area 0
+
+R1(config-router)# exit
+
+Na usmjerniku R2:
+
+
+R2(config)# router ospf 1
+
+R2(config-router)# router-id 2.2.2.2
+
+R2(config-router)# network 192.168.20.0 0.0.0.255 area 0
+
+R2(config-router)# network 10.0.0.0 0.0.0.3 area 0
+
+R2(config-router)# exit
+
+(Napomena: Naredbom network i tzv. wildcard maskom uključujemo sučelja u OSPF proces, svrstavajući ih u okosnicu mreže - Area 0).
+
+KORAK 6: Pregled OSPF tablica
+
+U privilegiranom načinu rada upišite sljedeće naredbe i analizirajte ispis:
+
+Na usmjerniku R1:
+
+R1# show ip ospf neighbor
+
+R1# show ip route ospf
+
+R1# show ip ospf database
+
+Na usmjerniku R2:
+
+R2# show ip ospf neighbor
+
+R2# show ip route ospf
+
+R2# show ip ospf database
+
+
+Zadatak za učenike (u bilježnicu):
+
+1. Pronađite u izlazu naredbe show ip ospf neighbor susjeda i zabilježite njegovo stanje (mora biti FULL).
+
+2. U usmjerničkoj tablici pronađite rute s oznakom O. Preko kojeg sučelja R1 doseže mrežu 192.168.20.0/24?
+
+3. U LSDB bazi prebrojite koliko LSA tipa 1 (Router LSA) vidite.
+
+KORAK 7: Isključivanje sučelja i analiza konvergencije
+
+1. Na R1 isključite serijsko sučelje prema R2:
+
+
+R1(config)# interface Serial2/0
+
+R1(config-if)# shutdown
+
+R1(config-if)# exit
+
+2. Na R2 redovito pokrećite naredbu show ip route ospf. Pratite što se događa s mrežom 192.168.10.0. (OSPF konvergira i prepoznaje pad linka znatno brže od RIP protokola).
+
+
+3. Ponovno uključite serijsko sučelje na R1 (no shutdown) i promatrajte povratak OSPF rute u tablicu.
+
+R1(config)# interface Serial2/0
+
+R1(config-if)# shutdown
+
+R1(config-if)# exit
+
+
+
+KORAK 8: Provjera povezanosti i spremanje konfiguracije
+
+Provjerite potpunu mrežnu povezanost s kraja na kraj:
+
+· Na PC0: ping 192.168.20.10
+
+· Na PC1: ping 192.168.10.10
+
+Spremite konfiguraciju na oba usmjernika u NVRAM memoriju:
+
+
+R1# copy running-config startup-config
+
+R2# copy running-config startup-config
+
+---
+
+6. NASTAVNE METODE I OBLICI RADA
+
+· Usmeno izlaganje (uvod u OSPF i link-state protokole).
+
+· Razgovor i vođena diskusija tijekom analize OSPF tablica.
+
+· Demonstracija rada u Cisco Packet Tracer simulatoru.
+
+· Praktični rad učenika na računalima (individualni rad uz mogućnost frontalnih uputa).
+
+---
+
+7. TEMELJNI POJMOVI I VJEŠTINE (ISHODI UČENJA)
+
+Pojmovi: Usmjernički protokol (routing protocol), Link-state protokol (OSPF), LSA paketi, LSDB (Link State Database), Tablica susjeda, OSPF područje (Area 0), Metrika (Cost).
+
+Vještine: Samostalno povezivanje uređaja, konfiguriranje usmjernika, pokretanje OSPF procesa (naredbe router ospf, network), te dijagnostika i rješavanje problema alatima show, ping i traceroute.
+
+---
+
+8. PITANJA ZA ZAVRŠNU DISKUSIJU / DOMAĆU ZADAĆU
+
+1. Zašto se OSPF naziva link-state usmjerničkim protokolom?
+
+2. Koja je uloga Router-ID-a u OSPF procesu?
+
+3. Objasnite razliku između tablice susjeda i LSDB tablice.
+
+4. Kako OSPF izračunava metriku (Cost) i što ta vrijednost predstavlja?
+
+5. Zašto se velike OSPF mreže dijele u područja (Area 0, Area 1, …)?
+
+Domaća zadaća:
+
+· Nacrtajte strukturu područja u jednostavnoj OSPF mreži (Backbone Area 0 + barem jedno dodatno područje).
+
+· Nacrtajte shemu: LSA → LSDB → SPF izračun → Usmjernička tablica i ukratko opišite svaki korak.
+
+---
+
+9. KRITERIJI VREDNOVANJA
+
+Minimum za dokazivanje razine reprodukcije:
+
+[ ] Ispravno povezati mrežne uređaje i računala.
+
+[ ] Konfigurirati osnovne IP postavke usmjernika i računala.
+
+[ ] Pokrenuti OSPF protokol na usmjernicima i pripadajućim sučeljima.
+
+[ ] Prikazati i protumačiti osnovni sadržaj OSPF ruta u tablici (show ip route ospf).
+
+[ ] Uspješno provjeriti rad mreže pomoću naredbe ping između PC0 i PC1.
+
+Minimum za dokazivanje primjene usvojenog znanja:
+
+[ ] Samostalno osmisliti tri logičke mreže (drugačiji adresni plan) i ispravno ih primijeniti na istu topologiju koristeći OSPF.
+
+[ ] Samostalno projektirati sličnu mrežu s dodatnim usmjernikom koristeći OSPF.
+
+[ ] Prilagoditi konfiguraciju OSPF-a pri promjeni topologije i stručno objasniti promjene u OSPF tablicama (neighbor, LSDB, routing).
+
+---
+
+10. OČEKIVANI REZULTATI
+
+Nakon ove vježbe očekuje se da će učenik:
+
+✓ Samostalno kreirati zadanu mrežu u Packet Traceru.
+
+✓ Ispravno konfigurirati uređaje i uspostaviti komunikaciju s kraja na kraj mreže.
+
+✓ Uspješno analizirati i obrazložiti promjene u OSPF rutama pri gašenju sučelja.
+
+✓ Jasno objasniti ključne značajke OSPF protokola i link-state usmjeravanja.
+
+---
+
+11. OPIS SUSTAVA PROCJENJIVANJA
+
+· Uspješno savladana vježba: Učenik je kreirao mrežu, konfigurirao IPv4 adrese, pokrenuo OSPF protokol na svim sučeljima te dokazao rad uspješnim ping testom.
+
+· Vrlo uspješno savladana vježba: Učenik ispunjava sve prethodno navedeno, te samostalno i stručno objašnjava proces rada OSPF protokola (link-state, LSDB, cost, brza konvergencija).
+
+· Izvrsno savladana vježba: Učenik ispunjava sve navedene kriterije, aktivno sudjeluje u završnoj diskusiji, točno odgovara na pitanja i domaću zadaću te samostalno proširuje zadatak dodavanjem novih mrežnih segmenata i rješavanjem složenijih problema usmjeravanja.

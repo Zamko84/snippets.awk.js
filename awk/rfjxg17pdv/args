@@ -1,0 +1,1 @@
+-F "[, ]+" 'BEGIN{Komande} /^(Router|R[0-9]+).*[#>]/ {print $0" ! " substring($0, match($0, /[0-9]+/),5); sub(/^R[0-9]+.*[#>] /, "");}'
