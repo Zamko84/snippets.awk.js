@@ -1,0 +1,1 @@
+-v RS='\r\n\r\n\n' '/BubbleUPnP/ && /[Ss][Tt]: uuid:/ {print $0 "\n"}'
