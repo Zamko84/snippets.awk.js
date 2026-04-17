@@ -1,0 +1,10 @@
+  '  /^[[:space:]]*ARG[[:space:]]/ {
+      sub(/^[[:space:]]*ARG[[:space:]]+/, "")
+      n = split($0, parts, /[[:space:]]+/)
+      for (i = 1; i <= n; i++) {
+        if (parts[i] == "") continue
+        split(parts[i], kv, "=")
+        if (kv[1] != "") print kv[1]
+      }
+    }
+'

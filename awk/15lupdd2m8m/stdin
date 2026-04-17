@@ -1,0 +1,20 @@
+FROM python:3-alpine
+ARG first second third
+ARG fourth=thing
+
+COPY src/index.html src/section.html src/args.html src/server.py /server/
+COPY src/cgi-bin/ /server/cgi-bin/
+WORKDIR /server
+RUN <<EOF
+    python -c 'import os; print(os.getcwd()); print(os.listdir("/server"))'
+    sed -i "/<\/body>/i <p>ARG1=${ARG1}<p>" args.html
+    sed -i "/<\/body>/i <p>ARG2=${ARG2}<p>" args.html
+    sed -i "/<\/body>/i <p>ARG3=${ARG3}<p>" args.html
+    sed -i "/<\/body>/i <p>ARG4=${ARG4}<p>" args.html
+    chmod +x cgi-bin/*.py
+    python -m compileall .
+    python -m compileall ./cgi-bin
+EOF
+
+EXPOSE 8080
+CMD ["python", "server.py"]
