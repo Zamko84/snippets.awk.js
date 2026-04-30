@@ -1,0 +1,13 @@
+'/^[0-9][0-9][0-9][0-9] [0-9][0-9] [0-9][0-9]$/ {
+    if (block) blocks[++n] = block
+    block = $0
+    next
+}
+{
+    block = block "\n" $0
+}
+END {
+    if (block) blocks[++n] = block
+    print "Number of blocks:", n
+    for (i = n; i >= 1; i--) print blocks[i]
+}'
