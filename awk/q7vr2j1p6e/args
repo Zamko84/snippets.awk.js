@@ -1,0 +1,31 @@
+BEGIN{
+print “Report of fee paid:”;
+totalfee=0
+FS=” “
+}
+{
+If ($1 ~ /[[ :alpha: ]]{2}[[ :digit: ]]{2}[[ :alpha: ]][[ :digit: ]]{3}+/)
+{
+roll=$1
+fee=$2
+arr[roll]=fee
+totalfee += fee
+print roll “ paid “ fee
+}
+}
+END{
+cutoff=21500
+print “List of students who paid less than ” cutoff
+ns=0
+for (roll in arr)
+{
+ns++
+if (arr[roll] < cutoff)
+{
+print “check “ roll “ paid only “ arr[roll]
+}
+}
+avg=totalfee/ns
+print “Total fee collected: “ totalfee
+print “Avg fee collected: “ avg
+}
