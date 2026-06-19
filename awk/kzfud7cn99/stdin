@@ -1,0 +1,466 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: galaxy
+  namespace: payment
+  labels:
+    app: galaxy
+spec:
+  selector:
+    matchLabels:
+      app: galaxy
+  template:
+    metadata:
+      labels:
+        app: galaxy
+      annotations:
+        cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
+        instrumentation.opentelemetry.io/inject-java: "observability/otel-instrumentation"
+        instrumentation.opentelemetry.io/container-names: "galaxy"
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: galaxy
+          securityContext:
+            allowPrivilegeEscalation: false
+          env:
+            - name: MYSQL_HOST
+              valueFrom:
+                secretKeyRef:
+                  key: MYSQL_HOST
+                  name: galaxy
+            - name: MYSQL_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  key: MYSQL_USERNAME
+                  name: galaxy
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: MYSQL_PASSWORD
+                  name: galaxy
+            - name: SPRING_PROFILE_NAME
+              valueFrom:
+                configMapKeyRef:
+                  key: SPRING_PROFILE_NAME
+                  name: galaxy
+            - name: REDIS_HOST
+              valueFrom:
+                configMapKeyRef:
+                  key: REDIS_HOST
+                  name: galaxy
+            - name: REDIS_PORT
+              valueFrom:
+                configMapKeyRef:
+                  key: REDIS_PORT
+                  name: galaxy
+            - name: REDIS_AUTH_STRING
+              valueFrom:
+                secretKeyRef:
+                  key: REDIS_AUTH_STRING
+                  name: galaxy
+            - name: ADYEN_HMAC_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: ADYEN_HMAC_KEY
+                  name: galaxy
+            - name: BIGQUERY_CLIENTID
+              valueFrom:
+                secretKeyRef:
+                  key: BIGQUERY_CLIENTID
+                  name: galaxy
+            - name: BIGQUERY_CLIENTSECRET
+              valueFrom:
+                secretKeyRef:
+                  key: BIGQUERY_CLIENTSECRET
+                  name: galaxy
+            - name: AUTH_SERVICE_GENERATE
+              valueFrom:
+                configMapKeyRef:
+                  key: AUTH_SERVICE_GENERATE
+                  name: galaxy
+            - name: AUTH_SERVICE_VALIDATE
+              valueFrom:
+                configMapKeyRef:
+                  key: AUTH_SERVICE_VALIDATE
+                  name: galaxy
+            - name: PAYOPT_ENDPOINT
+              valueFrom:
+                configMapKeyRef:
+                  key: PAYOPT_ENDPOINT
+                  name: galaxy
+            - name: CURRENCY_DETAILS_ENDPOINT
+              valueFrom:
+                configMapKeyRef:
+                  key: CURRENCY_DETAILS_ENDPOINT
+                  name: galaxy
+            - name: OVO_API_BASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: OVO_API_BASE_URL
+                  name: galaxy
+            - name: OVO_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  key: OVO_CLIENT_ID
+                  name: galaxy
+            - name: OVO_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  key: OVO_CLIENT_SECRET
+                  name: galaxy
+            - name: OVO_PRIVATE_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: OVO_PRIVATE_KEY
+                  name: galaxy
+            - name: OVO_DATA_SET
+              valueFrom:
+                secretKeyRef:
+                  key: OVO_DATA_SET
+                  name: galaxy
+            - name: OVO_MERCHANT_ID
+              valueFrom:
+                secretKeyRef:
+                  key: OVO_MERCHANT_ID
+                  name: galaxy
+            - name: OVO_SERVICE_CODE
+              valueFrom:
+                secretKeyRef:
+                  key: OVO_SERVICE_CODE
+                  name: galaxy
+            - name: BIG_PAY_API_BASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: BIG_PAY_API_BASE_URL
+                  name: galaxy
+            - name: BIG_PAY_DEEPLINK_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: BIG_PAY_DEEPLINK_URL
+                  name: galaxy
+            - name: BIG_PAY_SAS_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  key: BIG_PAY_SAS_CLIENT_ID
+                  name: galaxy
+            - name: BIG_PAY_SAS_KID
+              valueFrom:
+                secretKeyRef:
+                  key: BIG_PAY_SAS_KID
+                  name: galaxy
+            - name: BIG_PAY_SAS_PRIVATE_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: BIG_PAY_SAS_PRIVATE_KEY
+                  name: galaxy
+            - name: BIG_PAY_ACCESS_HASH_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: BIG_PAY_ACCESS_HASH_KEY
+                  name: galaxy
+            - name: BIG_PAY_ACCESS_PUBLIC_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: BIG_PAY_ACCESS_PUBLIC_KEY
+                  name: galaxy
+            - name: BIG_PAY_ACCESS_PRIVATE_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: BIG_PAY_ACCESS_PRIVATE_KEY
+                  name: galaxy
+            - name: BIG_PAY_BP_KID
+              valueFrom:
+                secretKeyRef:
+                  key: BIG_PAY_BP_KID
+                  name: galaxy
+            - name: BIG_PAY_PUBLIC_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: BIG_PAY_PUBLIC_KEY
+                  name: galaxy
+            - name: TWOC2P_PACO_ENCRYPTION_PUBLIC_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: TWOC2P_PACO_ENCRYPTION_PUBLIC_KEY
+                  name: galaxy
+            - name: TWOC2P_PACO_SIGNING_PUBLIC_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: TWOC2P_PACO_SIGNING_PUBLIC_KEY
+                  name: galaxy
+            - name: TWOC2P_AIRASIA_SIGNING_PUBLIC_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: TWOC2P_AIRASIA_SIGNING_PUBLIC_KEY
+                  name: galaxy
+            - name: TWOC2P_AIRASIA_SIGNING_PRIVATE_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: TWOC2P_AIRASIA_SIGNING_PRIVATE_KEY
+                  name: galaxy
+            - name: TWOC2P_AIRASIA_ENCRYPTION_PUBLIC_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: TWOC2P_AIRASIA_ENCRYPTION_PUBLIC_KEY
+                  name: galaxy
+            - name: TWOC2P_AIRASIA_ENCRYPTION_PRIVATE_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: TWOC2P_AIRASIA_ENCRYPTION_PRIVATE_KEY
+                  name: galaxy
+            - name: BIG_PAY_MAX_INDIVIDUAL_AMOUNT
+              valueFrom:
+                configMapKeyRef:
+                  key: BIG_PAY_MAX_INDIVIDUAL_AMOUNT
+                  name: galaxy
+            - name: BIG_PAY_PERIODIC_AMOUNT
+              valueFrom:
+                configMapKeyRef:
+                  key: BIG_PAY_PERIODIC_AMOUNT
+                  name: galaxy
+            - name: BIG_PAY_PERIODIC_ALIGNMENT
+              valueFrom:
+                configMapKeyRef:
+                  key: BIG_PAY_PERIODIC_ALIGNMENT
+                  name: galaxy
+            - name: BIG_PAY_PERIODIC_TYPE
+              valueFrom:
+                configMapKeyRef:
+                  key: BIG_PAY_PERIODIC_TYPE
+                  name: galaxy
+            - name: FINEXUS_SECRET_KEY_DD
+              valueFrom:
+                secretKeyRef:
+                  key: FINEXUS_SECRET_KEY_DD
+                  name: galaxy
+            - name: FINEXUS_CERT_FILENAME
+              valueFrom:
+                secretKeyRef:
+                  key: FINEXUS_CERT_FILENAME
+                  name: payment
+            - name: OTC_AES_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: OTC_AES_KEY
+                  name: galaxy
+            - name: NAVITAIRE_API_BASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: NAVITAIRE_API_BASE_URL
+                  name: galaxy
+            - name: GALAXY_ENVIRONMENT
+              valueFrom:
+                configMapKeyRef:
+                  key: GALAXY_ENVIRONMENT
+                  name: galaxy
+            - name: OTC_CLIENTID
+              valueFrom:
+                configMapKeyRef:
+                  key: OTC_CLIENTID
+                  name: galaxy
+            - name: PAYMENT_BASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: PAYMENT_BASE_URL
+                  name: galaxy
+            - name: AGENT_DOMAIN_CODE
+              valueFrom:
+                secretKeyRef:
+                  key: AGENT_DOMAIN_CODE
+                  name: galaxy
+            - name: AGENT_NAME
+              valueFrom:
+                secretKeyRef:
+                  key: AGENT_NAME
+                  name: galaxy
+            - name: AGENT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: AGENT_PASSWORD
+                  name: galaxy
+            - name: GALAXY_SSO_ADMIN_USER
+              valueFrom:
+                secretKeyRef:
+                  key: GALAXY_SSO_ADMIN_USER
+                  name: galaxy
+            - name: GALAXY_SSO_ADMIN_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: GALAXY_SSO_ADMIN_PASSWORD
+                  name: galaxy
+            - name: TWOC2P_PACO_BASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: TWOC2P_PACO_BASE_URL
+                  name: galaxy
+            - name: GALAXY_DEFAULT_ORIGIN
+              valueFrom:
+                configMapKeyRef:
+                  key: GALAXY_DEFAULT_ORIGIN
+                  name: galaxy
+            - name: BIGLIFE_API_BASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: BIGLIFE_API_BASE_URL
+                  name: galaxy
+            - name: BIGLIFE_AWS_ACCRUAL_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: BIGLIFE_AWS_ACCRUAL_SECRET_KEY
+                  name: galaxy
+            - name: BIGLIFE_AWS_ACCRUAL_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: BIGLIFE_AWS_ACCRUAL_ACCESS_KEY
+                  name: galaxy
+            - name: BIGLIFE_AWS_REDEEM_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: BIGLIFE_AWS_REDEEM_SECRET_KEY
+                  name: galaxy
+            - name: BIGLIFE_AWS_REDEEM_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: BIGLIFE_AWS_REDEEM_ACCESS_KEY
+                  name: galaxy
+            - name: BIGLIFE_AWS_FLIGHT_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: BIGLIFE_AWS_FLIGHT_SECRET_KEY
+                  name: galaxy
+            - name: BIGLIFE_AWS_FLIGHT_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: BIGLIFE_AWS_FLIGHT_ACCESS_KEY
+                  name: galaxy
+            - name: BIGLIFE_AWS_REGION
+              valueFrom:
+                configMapKeyRef:
+                  key: BIGLIFE_AWS_REGION
+                  name: galaxy
+            - name: BIGLIFE_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  key: BIGLIFE_CLIENT_ID
+                  name: galaxy
+            - name: BIGLIFE_AWS_SERVICE
+              valueFrom:
+                configMapKeyRef:
+                  key: BIGLIFE_AWS_SERVICE
+                  name: galaxy
+            - name: MCC_API_BASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: MCC_API_BASE_URL
+                  name: galaxy
+            - name: MCC_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  key: MCC_CLIENT_ID
+                  name: galaxy
+            - name: LAKALA_PRIV_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: LAKALA_PRIV_KEY
+                  name: galaxy
+            - name: MCC_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  key: MCC_CLIENT_SECRET
+                  name: galaxy
+            - name: GCP_SA_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: GCP_SA_KEY
+                  name: galaxy
+            - name: NAVITAIRE_GATEWAY_PRIVATE_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: NAVITAIRE_GATEWAY_PRIVATE_KEY
+                  name: galaxy
+            - name: NAVITAIRE_GATEWAY_ISSUER
+              valueFrom:
+                secretKeyRef:
+                  key: NAVITAIRE_GATEWAY_ISSUER
+                  name: galaxy
+            - name: BIG_PAY_QR_PRIV_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: BIG_PAY_QR_PRIV_KEY
+                  name: galaxy
+            - name: BIG_PAY_QR_PUB_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: BIG_PAY_QR_PUB_KEY
+                  name: galaxy
+            - name: CASHIER_SC_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: cashier-saved-cards
+                  key: CASHIER_CLIENT_ID
+            - name: CASHIER_SC_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: cashier-saved-cards
+                  key: CASHIER_CLIENT_SECRET
+            - name: GCP_PROJECT
+              valueFrom:
+                configMapKeyRef:
+                  key: GCP_PROJECT
+                  name: galaxy
+            - name: KMS_KEY_RING_ID
+              valueFrom:
+                configMapKeyRef:
+                  key: KMS_KEY_RING_ID
+                  name: galaxy
+            - name: KMS_KEY_ID
+              valueFrom:
+                configMapKeyRef:
+                  key: KMS_KEY_ID
+                  name: galaxy
+            - name: PUBSUB_PUBLISHER_THREAD
+              valueFrom:
+                configMapKeyRef:
+                  key: PUBSUB_PUBLISHER_THREAD
+                  name: galaxy
+            - name: GALAXY_GATEWAY_TOPIC
+              valueFrom:
+                configMapKeyRef:
+                  key: GALAXY_GATEWAY_TOPIC
+                  name: galaxy
+            - name: GCP_SCHEDULER_SA
+              valueFrom:
+                configMapKeyRef:
+                  key: GCP_SCHEDULER_SA
+                  name: galaxy
+          image: IMAGE_PLACEHOLDER
+          resources:
+            limits:
+              memory: 3Gi
+            requests:
+              cpu: 500m
+              memory: 1.5Gi
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            failureThreshold: 10
+            httpGet:
+              path: /galaxy-health-check
+              port: 8080
+              scheme: HTTP
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 30
+          livenessProbe:
+            failureThreshold: 10
+            httpGet:
+              path: /galaxy-health-check
+              port: 8080
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 30
+      restartPolicy: Always

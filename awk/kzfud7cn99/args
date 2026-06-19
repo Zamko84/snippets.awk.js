@@ -1,0 +1,1 @@
+/^kind:[ \t]*Deployment/{in_dep=1; next} /^kind:/{in_dep=0; next} in_dep && /^  name:[ \t]*/{name=$2; gsub(/["\x27]/, "", name); print name; exit}
