@@ -1,0 +1,1 @@
+echo aaba|awk -F 'b*' '{print NF}' # >2
