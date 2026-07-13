@@ -1,0 +1,12 @@
+
+	index($0, "ARRAY") == 1 {
+		if (line) { print line }
+		line=$0
+		next
+	}
+	{
+		sub(/^ +/, "")
+		line=line " " $0
+	} END {
+		print line
+	}

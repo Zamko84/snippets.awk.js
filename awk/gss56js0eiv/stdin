@@ -1,0 +1,2 @@
+ARRAY /dev/md2 level=raid1 num-devices=2 metadata=1.2 name=md2 UUID=d7fbd84d:da187d60:20e7812c:a17050ba
+   devices=/dev/sda2,/dev/sdb2
