@@ -1,0 +1,4 @@
+[defaults]
+interpreter_python = python
+[inventory]
+enable_plugins = host_list, script, auto, yaml, ini, toml, ovirt.ovirt.ovirt
