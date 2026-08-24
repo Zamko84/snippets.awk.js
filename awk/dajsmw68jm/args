@@ -1,0 +1,42 @@
+'
+# Quick way to reformat for easier processing agate work
+BEGIN {
+# Just hardcode correct headers
+    print "   2026 TEAM 2026 VS OPP LAST 3 STARTS"
+    print "PITCHERS TIME W-L ERA REC W-L IP ERA W-L IP ERA"
+}
+
+# Sets flag - found the line starting with LAST 3 STARTS
+/^LAST 3 STARTS/ {
+    in_last3 = 1
+    next
+}
+
+# Capture LAST 3 STARTS data
+# for both pitchers
+in_last3 && $1 != "W-L" {
+    last3[$1] = $2 " " $3 " " $4 # last3[Rocker] = 0-2 13 7.62
+    next
+}
+
+# Store main pitcher rows
+# Match to make sure correct only lines not starting with PITCHERS or 2026 
+# And have 9 or more fields
+# Store them in array pitchers
+!in_last3 && NF >= 9 && $1 != "2026" && $1 != "PITCHERS" {
+    pitchers[++n] = $0
+    next
+}
+
+# Put it all together :)
+END {
+# Loop through both pitchers
+    for (i = 1; i <= n; i++) {
+        line = pitchers[i]
+        split(line, f, /[[:space:]]+/) # break apart at spaces and store in f variable
+        # use last name to grab correct players stats
+        name = f[2]
+        # append the last values three starts of each pitcher
+        print line " " last3[name]
+    }
+}'
