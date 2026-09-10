@@ -1,0 +1,16 @@
+'
+        /^diff --git / {
+          file = $4
+          sub(/^b\//, "", file)
+          next
+        }
+        /^\+\+\+ / { next }
+        /^\+/ {
+          line = substr($0, 2)
+          comment = line
+          sub(/^[[:space:]]*#[[:space:]]*/, "", comment)
+          sub(/[[:space:];,]*$/, "", comment)
+          if (comment != line && comment ~ /^[^[:space:]]+\.(c|cc|cpp|cxx|h|hh|hpp|hxx)$/)
+          print file":" line
+        }
+'
