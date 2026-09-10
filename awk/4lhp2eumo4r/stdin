@@ -1,0 +1,14 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 11268eb..69c5b50 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -14 +14 @@ enable_testing()
+-add_subdirectory( tests )
++#add_subdirectory( tests )
+diff --git a/tests/unit/CMakeLists.txt b/tests/unit/CMakeLists.txt
+index e6f1023..ddf23c8 100644
+--- a/tests/unit/CMakeLists.txt
++++ b/tests/unit/CMakeLists.txt
+@@ -2 +2 @@ set( SRCS
+-     lib/dummytest.cpp
++     # lib/dummytest.cpp
